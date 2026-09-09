@@ -926,3 +926,25 @@ jwaa.nies.SentinelError: 2022-04-29 PRS に未知の値 9992.0 が出た(定義�
     再試行 8/12 (ConnectionResetError) — 128 秒待つ
     再試行 9/12 (ConnectionResetError) — 256 秒待つ
     再試行 10/12 (ConnectionResetError) — 300 秒待つ
+    j39_2023.zip:   0.6 MB -> 局    9 -> 39.json
+    j40_2023.zip:   3.3 MB -> 局   55 -> 40.json
+    j41_2023.zip:   0.7 MB -> 局   18 -> 41.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j42_2023.zip:   1.5 MB -> 局   24 -> 42.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j43_2023.zip:   1.9 MB -> 局   35 -> 43.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    再試行 5/12 (ConnectionResetError) — 16 秒待つ
+    j44_2023.zip:   1.8 MB -> 局   26 -> 44.json
+    j45_2023.zip:   0.9 MB -> 局   21 -> 45.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j46_2023.zip:   1.1 MB -> 局   18 -> 46.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j47_2023.zip:   0.3 MB -> 局   10 -> 47.json
+  FY2023: 局 1,750 / 日別値 442,860 ({'so2': 106140, 'no2': 129564, 'ox': 109434, 'pm25': 97722})
+  外部要求 16 件 / キャッシュ命中 58 件 / 再試行 36 件
