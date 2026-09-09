@@ -1,0 +1,34 @@
+{
+  "name": "japan-weather-atmosphere-atlas",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "日本の過去の気象・温室効果ガス・大気汚染を地図と時系列で重ね、深層学習の表現で似た日・異常度・パターンを引く静的アトラス",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "smoke": "node harness/smoke.mjs",
+    "smoke:shot": "node harness/smoke.mjs --shot",
+    "verify": "npm run typecheck && npm run test && npm run build && npm run smoke"
+  },
+  "dependencies": {
+    "maplibre-gl": "^5.9.0",
+    "next": "^15.5.24",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "playwright": "^1.62.1",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.8"
+  }
+}

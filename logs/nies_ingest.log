@@ -1,0 +1,928 @@
+測定局マスタ FY2023: 47 ファイル
+-> C:\_ClaudeCode\japan-weather-atmosphere-atlas\data\processed\nies_stations.json (1,773 局)
+    j01_2014.zip:   3.7 MB -> 局   90 -> 01.json
+    j02_2014.zip:   0.8 MB -> 局   18 -> 02.json
+    j03_2014.zip:   0.7 MB -> 局   15 -> 03.json
+    j04_2014.zip:   1.8 MB -> 局   36 -> 04.json
+    j05_2014.zip:   0.9 MB -> 局   21 -> 05.json
+    j06_2014.zip:   0.7 MB -> 局   17 -> 06.json
+    j07_2014.zip:   2.7 MB -> 局   36 -> 07.json
+    j08_2014.zip:   3.4 MB -> 局   52 -> 08.json
+    j09_2014.zip:   2.1 MB -> 局   35 -> 09.json
+    j10_2014.zip:   2.1 MB -> 局   28 -> 10.json
+    j11_2014.zip:   6.3 MB -> 局   83 -> 11.json
+    j12_2014.zip:  10.4 MB -> 局  132 -> 12.json
+    j13_2014.zip:   7.2 MB -> 局   92 -> 13.json
+    j14_2014.zip:   6.5 MB -> 局   92 -> 14.json
+    j15_2014.zip:   1.4 MB -> 局   29 -> 15.json
+    j16_2014.zip:   1.6 MB -> 局   26 -> 16.json
+    j17_2014.zip:   1.4 MB -> 局   24 -> 17.json
+    j18_2014.zip:   2.0 MB -> 局   31 -> 18.json
+    j19_2014.zip:   0.7 MB -> 局   12 -> 19.json
+    j20_2014.zip:   1.5 MB -> 局   23 -> 20.json
+    j21_2014.zip:   0.8 MB -> 局   18 -> 21.json
+    j22_2014.zip:   3.7 MB -> 局   68 -> 22.json
+    j23_2014.zip:   6.6 MB -> 局  121 -> 23.json
+    j24_2014.zip:   2.6 MB -> 局   32 -> 24.json
+    j25_2014.zip:   1.2 MB -> 局   16 -> 25.json
+    j26_2014.zip:   2.0 MB -> 局   33 -> 26.json
+    j27_2014.zip:   7.0 MB -> 局  105 -> 27.json
+    j28_2014.zip:   6.5 MB -> 局  103 -> 28.json
+    j29_2014.zip:   0.6 MB -> 局   14 -> 29.json
+    j30_2014.zip:   1.7 MB -> 局   34 -> 30.json
+    j31_2014.zip:   0.3 MB -> 局    6 -> 31.json
+    j32_2014.zip:   0.7 MB -> 局    9 -> 32.json
+    j33_2014.zip:   2.6 MB -> 局   66 -> 33.json
+    j34_2014.zip:   2.5 MB -> 局   41 -> 34.json
+    j35_2014.zip:   2.6 MB -> 局   35 -> 35.json
+    j36_2014.zip:   1.2 MB -> 局   22 -> 36.json
+    j37_2014.zip:   1.4 MB -> 局   22 -> 37.json
+    j38_2014.zip:   1.6 MB -> 局   32 -> 38.json
+    j39_2014.zip:   0.5 MB -> 局    9 -> 39.json
+    j40_2014.zip:   3.4 MB -> 局   62 -> 40.json
+Traceback (most recent call last):
+  File "C:\_ClaudeCode\japan-weather-atmosphere-atlas\scripts\ingest\nies_air.py", line 195, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "C:\_ClaudeCode\japan-weather-atmosphere-atlas\scripts\ingest\nies_air.py", line 188, in main
+    ingest_year(fetcher, year, args.min_coverage)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\_ClaudeCode\japan-weather-atmosphere-atlas\scripts\ingest\nies_air.py", line 128, in ingest_year
+    blob = download(fetcher, sources.NIES_TYPE_HOURLY_BY_PREF, meta["name"])
+  File "C:\_ClaudeCode\japan-weather-atmosphere-atlas\scripts\ingest\nies_air.py", line 67, in download
+    return fetcher.post(
+           ~~~~~~~~~~~~^
+        sources.NIES_ARCHIVE_DOWNLOAD, {"type": dtype, "file": name},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        headers=_headers(),
+        ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\_ClaudeCode\japan-weather-atmosphere-atlas\jwaa\fetch.py", line 84, in post
+    return self._fetch(url, body, suffix=suffix, validate=validate,
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       headers=headers)
+                       ^^^^^^^^^^^^^^^^
+  File "C:\_ClaudeCode\japan-weather-atmosphere-atlas\jwaa\fetch.py", line 127, in _fetch
+    raise FetchError(f"{self.tries} 回とも取得に失敗: {url} — {last!r}")
+jwaa.fetch.FetchError: 8 回とも取得に失敗: https://tenbou.nies.go.jp/download/api/archivedownload.php — ConnectionResetError(10054, '既存の接続はリモート ホストに強制的に切断されました。', None, 10054, None)
+測定局マスタ FY2023: 47 ファイル
+-> C:\_ClaudeCode\japan-weather-atmosphere-atlas\data\processed\nies_stations.json (1,773 局)
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j41_2014.zip:   0.9 MB -> 局   19 -> 41.json
+    j42_2014.zip:   1.7 MB -> 局   24 -> 42.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j43_2014.zip:   2.0 MB -> 局   40 -> 43.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j44_2014.zip:   1.6 MB -> 局   27 -> 44.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j45_2014.zip:   1.0 MB -> 局   20 -> 45.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j46_2014.zip:   1.2 MB -> 局   19 -> 46.json
+    j47_2014.zip:   0.3 MB -> 局    9 -> 47.json
+  FY2014: 局 1,898 / 日別値 170,820 ({'so2': 44530, 'no2': 49640, 'ox': 39785, 'pm25': 36865})
+    j01_2015.zip:   4.0 MB -> 局   92 -> 01.json
+    j02_2015.zip:   0.8 MB -> 局   19 -> 02.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j03_2015.zip:   0.7 MB -> 局   15 -> 03.json
+    j04_2015.zip:   1.8 MB -> 局   36 -> 04.json
+    j05_2015.zip:   0.9 MB -> 局   21 -> 05.json
+    j06_2015.zip:   0.7 MB -> 局   17 -> 06.json
+    j07_2015.zip:   2.9 MB -> 局   38 -> 07.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j08_2015.zip:   3.2 MB -> 局   44 -> 08.json
+    j09_2015.zip:   2.1 MB -> 局   35 -> 09.json
+    j10_2015.zip:   1.9 MB -> 局   28 -> 10.json
+    j11_2015.zip:   6.3 MB -> 局   84 -> 11.json
+    j12_2015.zip:  10.2 MB -> 局  128 -> 12.json
+    j13_2015.zip:   7.2 MB -> 局   92 -> 13.json
+    j14_2015.zip:   6.9 MB -> 局   92 -> 14.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j15_2015.zip:   1.4 MB -> 局   29 -> 15.json
+    j16_2015.zip:   1.6 MB -> 局   26 -> 16.json
+    j17_2015.zip:   1.4 MB -> 局   24 -> 17.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j18_2015.zip:   1.5 MB -> 局   26 -> 18.json
+    j19_2015.zip:   0.8 MB -> 局   12 -> 19.json
+    j20_2015.zip:   1.5 MB -> 局   23 -> 20.json
+    j21_2015.zip:   1.0 MB -> 局   18 -> 21.json
+    j22_2015.zip:   3.8 MB -> 局   68 -> 22.json
+    j23_2015.zip:   7.0 MB -> 局  116 -> 23.json
+    j24_2015.zip:   2.6 MB -> 局   32 -> 24.json
+    j25_2015.zip:   1.2 MB -> 局   16 -> 25.json
+    j26_2015.zip:   2.0 MB -> 局   33 -> 26.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j27_2015.zip:   7.4 MB -> 局  105 -> 27.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j28_2015.zip:   6.9 MB -> 局  104 -> 28.json
+    j29_2015.zip:   0.6 MB -> 局   14 -> 29.json
+    j30_2015.zip:   1.7 MB -> 局   34 -> 30.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    j31_2015.zip:   0.4 MB -> 局    6 -> 31.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j32_2015.zip:   0.6 MB -> 局    9 -> 32.json
+    j33_2015.zip:   2.8 MB -> 局   66 -> 33.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j34_2015.zip:   2.7 MB -> 局   41 -> 34.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    j35_2015.zip:   2.4 MB -> 局   35 -> 35.json
+    j36_2015.zip:   0.9 MB -> 局   22 -> 36.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j37_2015.zip:   1.1 MB -> 局   23 -> 37.json
+    j38_2015.zip:   1.6 MB -> 局   32 -> 38.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j39_2015.zip:   0.5 MB -> 局    8 -> 39.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j40_2015.zip:   3.7 MB -> 局   60 -> 40.json
+    j41_2015.zip:   1.0 MB -> 局   19 -> 41.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j42_2015.zip:   1.6 MB -> 局   24 -> 42.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j43_2015.zip:   2.0 MB -> 局   36 -> 43.json
+    j44_2015.zip:   1.8 MB -> 局   27 -> 44.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j45_2015.zip:   0.9 MB -> 局   21 -> 45.json
+    j46_2015.zip:   1.2 MB -> 局   19 -> 46.json
+    j47_2015.zip:   0.3 MB -> 局   10 -> 47.json
+  FY2015: 局 1,879 / 日別値 1,812,432 ({'so2': 386496, 'no2': 618174, 'ox': 433710, 'pm25': 374052})
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j01_2016.zip:   3.8 MB -> 局   90 -> 01.json
+    j02_2016.zip:   0.8 MB -> 局   18 -> 02.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j03_2016.zip:   0.6 MB -> 局   15 -> 03.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j04_2016.zip:   1.8 MB -> 局   38 -> 04.json
+    j05_2016.zip:   0.9 MB -> 局   21 -> 05.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    再試行 5/12 (ConnectionResetError) — 16 秒待つ
+    j06_2016.zip:   0.7 MB -> 局   17 -> 06.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j07_2016.zip:   2.8 MB -> 局   37 -> 07.json
+    j08_2016.zip:   3.1 MB -> 局   44 -> 08.json
+    j09_2016.zip:   2.1 MB -> 局   35 -> 09.json
+    j10_2016.zip:   2.0 MB -> 局   28 -> 10.json
+    j11_2016.zip:   6.3 MB -> 局   84 -> 11.json
+    j12_2016.zip:   9.9 MB -> 局  126 -> 12.json
+    j13_2016.zip:   7.6 MB -> 局   92 -> 13.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j14_2016.zip:   6.9 MB -> 局   92 -> 14.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j15_2016.zip:   1.3 MB -> 局   28 -> 15.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j16_2016.zip:   1.5 MB -> 局   26 -> 16.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j17_2016.zip:   1.4 MB -> 局   24 -> 17.json
+    j18_2016.zip:   1.5 MB -> 局   24 -> 18.json
+    j19_2016.zip:   0.7 MB -> 局   12 -> 19.json
+    j20_2016.zip:   1.5 MB -> 局   23 -> 20.json
+    j21_2016.zip:   0.8 MB -> 局   19 -> 21.json
+    j22_2016.zip:   3.7 MB -> 局   68 -> 22.json
+    j23_2016.zip:   6.7 MB -> 局  113 -> 23.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j24_2016.zip:   2.5 MB -> 局   31 -> 24.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    再試行 5/12 (ConnectionResetError) — 16 秒待つ
+    j25_2016.zip:   1.1 MB -> 局   16 -> 25.json
+    j26_2016.zip:   2.0 MB -> 局   33 -> 26.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j27_2016.zip:   7.3 MB -> 局  106 -> 27.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j28_2016.zip:   6.8 MB -> 局  103 -> 28.json
+    j29_2016.zip:   0.6 MB -> 局   14 -> 29.json
+    j30_2016.zip:   1.7 MB -> 局   34 -> 30.json
+    j31_2016.zip:   0.4 MB -> 局    6 -> 31.json
+    j32_2016.zip:   0.6 MB -> 局    9 -> 32.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    j33_2016.zip:   2.8 MB -> 局   66 -> 33.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j34_2016.zip:   2.5 MB -> 局   41 -> 34.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j35_2016.zip:   2.5 MB -> 局   32 -> 35.json
+    j36_2016.zip:   0.9 MB -> 局   22 -> 36.json
+    j37_2016.zip:   1.4 MB -> 局   23 -> 37.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j38_2016.zip:   1.6 MB -> 局   32 -> 38.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    再試行 5/12 (ConnectionResetError) — 16 秒待つ
+    j39_2016.zip:   0.5 MB -> 局    9 -> 39.json
+    j40_2016.zip:   3.7 MB -> 局   60 -> 40.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j41_2016.zip:   1.0 MB -> 局   18 -> 41.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j42_2016.zip:   1.5 MB -> 局   24 -> 42.json
+    j43_2016.zip:   2.0 MB -> 局   36 -> 43.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    再試行 5/12 (ConnectionResetError) — 16 秒待つ
+    再試行 6/12 (ConnectionResetError) — 32 秒待つ
+    j44_2016.zip:   1.8 MB -> 局   27 -> 44.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j45_2016.zip:   0.9 MB -> 局   21 -> 45.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j46_2016.zip:   1.1 MB -> 局   19 -> 46.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    再試行 5/12 (ConnectionResetError) — 16 秒待つ
+    j47_2016.zip:   0.3 MB -> 局   10 -> 47.json
+  FY2016: 局 1,866 / 日別値 1,796,529 ({'so2': 372299, 'no2': 608455, 'ox': 431795, 'pm25': 383980})
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j01_2017.zip:   3.7 MB -> 局   89 -> 01.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j02_2017.zip:   0.7 MB -> 局   18 -> 02.json
+    j03_2017.zip:   0.6 MB -> 局   15 -> 03.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j04_2017.zip:   1.7 MB -> 局   38 -> 04.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j05_2017.zip:   0.9 MB -> 局   21 -> 05.json
+    j06_2017.zip:   0.7 MB -> 局   17 -> 06.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j07_2017.zip:   2.8 MB -> 局   37 -> 07.json
+    j08_2017.zip:   3.2 MB -> 局   44 -> 08.json
+    j09_2017.zip:   2.0 MB -> 局   35 -> 09.json
+    j10_2017.zip:   2.0 MB -> 局   28 -> 10.json
+    j11_2017.zip:   6.4 MB -> 局   84 -> 11.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j12_2017.zip:   9.8 MB -> 局  126 -> 12.json
+    j13_2017.zip:   7.5 MB -> 局   91 -> 13.json
+    j14_2017.zip:   6.8 MB -> 局   92 -> 14.json
+    j15_2017.zip:   1.4 MB -> 局   28 -> 15.json
+    j16_2017.zip:   1.5 MB -> 局   26 -> 16.json
+    j17_2017.zip:   1.3 MB -> 局   24 -> 17.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j18_2017.zip:   1.5 MB -> 局   24 -> 18.json
+    j19_2017.zip:   0.7 MB -> 局   12 -> 19.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j20_2017.zip:   1.4 MB -> 局   23 -> 20.json
+    j21_2017.zip:   1.0 MB -> 局   20 -> 21.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j22_2017.zip:   3.6 MB -> 局   68 -> 22.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j23_2017.zip:   6.7 MB -> 局  110 -> 23.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j24_2017.zip:   2.2 MB -> 局   32 -> 24.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j25_2017.zip:   1.4 MB -> 局   16 -> 25.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j26_2017.zip:   1.9 MB -> 局   33 -> 26.json
+    j27_2017.zip:   7.2 MB -> 局  105 -> 27.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j28_2017.zip:   6.7 MB -> 局  103 -> 28.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j29_2017.zip:   0.6 MB -> 局   14 -> 29.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j30_2017.zip:   1.6 MB -> 局   33 -> 30.json
+    j31_2017.zip:   0.4 MB -> 局    6 -> 31.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j32_2017.zip:   0.6 MB -> 局    9 -> 32.json
+    j33_2017.zip:   2.9 MB -> 局   67 -> 33.json
+    j34_2017.zip:   2.5 MB -> 局   41 -> 34.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j35_2017.zip:   2.7 MB -> 局   31 -> 35.json
+    j36_2017.zip:   1.0 MB -> 局   22 -> 36.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j37_2017.zip:   1.0 MB -> 局   23 -> 37.json
+    j38_2017.zip:   1.5 MB -> 局   32 -> 38.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j39_2017.zip:   0.5 MB -> 局    9 -> 39.json
+    j40_2017.zip:   3.7 MB -> 局   60 -> 40.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j41_2017.zip:   0.9 MB -> 局   18 -> 41.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    j42_2017.zip:   1.5 MB -> 局   24 -> 42.json
+    j43_2017.zip:   2.0 MB -> 局   36 -> 43.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j44_2017.zip:   1.8 MB -> 局   27 -> 44.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j45_2017.zip:   0.9 MB -> 局   21 -> 45.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j46_2017.zip:   1.1 MB -> 局   19 -> 46.json
+    j47_2017.zip:   0.3 MB -> 局   10 -> 47.json
+  FY2017: 局 1,861 / 日別値 1,792,150 ({'so2': 367190, 'no2': 603710, 'ox': 433255, 'pm25': 387995})
+    j01_2018.zip:   3.4 MB -> 局   87 -> 01.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j02_2018.zip:   0.7 MB -> 局   18 -> 02.json
+    j03_2018.zip:   0.6 MB -> 局   15 -> 03.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j04_2018.zip:   1.7 MB -> 局   38 -> 04.json
+    j05_2018.zip:   0.8 MB -> 局   20 -> 05.json
+    j06_2018.zip:   0.6 MB -> 局   17 -> 06.json
+    j07_2018.zip:   2.7 MB -> 局   37 -> 07.json
+    j08_2018.zip:   3.2 MB -> 局   52 -> 08.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j09_2018.zip:   1.9 MB -> 局   35 -> 09.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j10_2018.zip:   1.9 MB -> 局   28 -> 10.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j11_2018.zip:   5.8 MB -> 局   83 -> 11.json
+    j12_2018.zip:   9.1 MB -> 局  127 -> 12.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j13_2018.zip:   6.9 MB -> 局   91 -> 13.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j14_2018.zip:   6.3 MB -> 局   92 -> 14.json
+    j15_2018.zip:   1.3 MB -> 局   28 -> 15.json
+    j16_2018.zip:   1.4 MB -> 局   26 -> 16.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    再試行 5/12 (ConnectionResetError) — 16 秒待つ
+    再試行 6/12 (ConnectionResetError) — 32 秒待つ
+    再試行 7/12 (ConnectionResetError) — 64 秒待つ
+    j17_2018.zip:   1.2 MB -> 局   23 -> 17.json
+    j18_2018.zip:   1.4 MB -> 局   24 -> 18.json
+    j19_2018.zip:   0.7 MB -> 局   12 -> 19.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j20_2018.zip:   1.3 MB -> 局   23 -> 20.json
+    j21_2018.zip:   1.1 MB -> 局   21 -> 21.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j22_2018.zip:   3.6 MB -> 局   68 -> 22.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j23_2018.zip:   6.2 MB -> 局  108 -> 23.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    再試行 5/12 (ConnectionResetError) — 16 秒待つ
+    再試行 6/12 (ConnectionResetError) — 32 秒待つ
+    再試行 7/12 (ConnectionResetError) — 64 秒待つ
+    j24_2018.zip:   2.1 MB -> 局   33 -> 24.json
+    j25_2018.zip:   1.0 MB -> 局   16 -> 25.json
+    j26_2018.zip:   1.7 MB -> 局   32 -> 26.json
+    j27_2018.zip:   6.7 MB -> 局  105 -> 27.json
+    j28_2018.zip:   6.2 MB -> 局  103 -> 28.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j29_2018.zip:   0.6 MB -> 局   14 -> 29.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j30_2018.zip:   1.5 MB -> 局   33 -> 30.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j31_2018.zip:   0.3 MB -> 局    6 -> 31.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j32_2018.zip:   0.6 MB -> 局    9 -> 32.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j33_2018.zip:   2.7 MB -> 局   66 -> 33.json
+    j34_2018.zip:   2.2 MB -> 局   40 -> 34.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j35_2018.zip:   2.5 MB -> 局   31 -> 35.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j36_2018.zip:   0.9 MB -> 局   22 -> 36.json
+    j37_2018.zip:   1.0 MB -> 局   23 -> 37.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j38_2018.zip:   1.4 MB -> 局   32 -> 38.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j39_2018.zip:   0.5 MB -> 局    9 -> 39.json
+    j40_2018.zip:   3.4 MB -> 局   60 -> 40.json
+    j41_2018.zip:   0.8 MB -> 局   18 -> 41.json
+    j42_2018.zip:   1.4 MB -> 局   24 -> 42.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j43_2018.zip:   1.8 MB -> 局   38 -> 43.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j44_2018.zip:   1.6 MB -> 局   27 -> 44.json
+    j45_2018.zip:   0.8 MB -> 局   21 -> 45.json
+    j46_2018.zip:   1.1 MB -> 局   19 -> 46.json
+    j47_2018.zip:   0.3 MB -> 局   10 -> 47.json
+  FY2018: 局 1,864 / 日別値 1,808,575 ({'so2': 369745, 'no2': 606995, 'ox': 436540, 'pm25': 395295})
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j01_2019.zip:   3.7 MB -> 局   89 -> 01.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j02_2019.zip:   0.7 MB -> 局   18 -> 02.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    j03_2019.zip:   0.6 MB -> 局   15 -> 03.json
+    j04_2019.zip:   2.1 MB -> 局   39 -> 04.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j05_2019.zip:   0.8 MB -> 局   19 -> 05.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j06_2019.zip:   0.6 MB -> 局   17 -> 06.json
+    j07_2019.zip:   2.8 MB -> 局   37 -> 07.json
+    j08_2019.zip:   3.3 MB -> 局   51 -> 08.json
+    j09_2019.zip:   1.9 MB -> 局   33 -> 09.json
+    j10_2019.zip:   2.0 MB -> 局   28 -> 10.json
+    j11_2019.zip:   6.2 MB -> 局   83 -> 11.json
+    j12_2019.zip:   9.5 MB -> 局  125 -> 12.json
+    j13_2019.zip:   7.2 MB -> 局   91 -> 13.json
+    j14_2019.zip:   6.3 MB -> 局   92 -> 14.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j15_2019.zip:   1.3 MB -> 局   28 -> 15.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j16_2019.zip:   1.2 MB -> 局   19 -> 16.json
+    j17_2019.zip:   1.3 MB -> 局   23 -> 17.json
+    j18_2019.zip:   1.5 MB -> 局   24 -> 18.json
+    j19_2019.zip:   0.7 MB -> 局   12 -> 19.json
+    j20_2019.zip:   1.4 MB -> 局   23 -> 20.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    再試行 5/12 (ConnectionResetError) — 16 秒待つ
+    j21_2019.zip:   1.3 MB -> 局   23 -> 21.json
+    j22_2019.zip:   3.4 MB -> 局   68 -> 22.json
+    j23_2019.zip:   7.0 MB -> 局  105 -> 23.json
+    j24_2019.zip:   2.2 MB -> 局   34 -> 24.json
+    j25_2019.zip:   0.9 MB -> 局   16 -> 25.json
+    j26_2019.zip:   1.8 MB -> 局   33 -> 26.json
+    j27_2019.zip:   7.0 MB -> 局  104 -> 27.json
+    j28_2019.zip:   6.6 MB -> 局  103 -> 28.json
+    j29_2019.zip:   0.6 MB -> 局   14 -> 29.json
+    j30_2019.zip:   1.6 MB -> 局   33 -> 30.json
+    j31_2019.zip:   0.3 MB -> 局    6 -> 31.json
+    j32_2019.zip:   0.6 MB -> 局    9 -> 32.json
+    j33_2019.zip:   2.8 MB -> 局   67 -> 33.json
+    j34_2019.zip:   2.3 MB -> 局   37 -> 34.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j35_2019.zip:   2.6 MB -> 局   31 -> 35.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j36_2019.zip:   1.0 MB -> 局   22 -> 36.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j37_2019.zip:   1.0 MB -> 局   23 -> 37.json
+    j38_2019.zip:   1.4 MB -> 局   31 -> 38.json
+    j39_2019.zip:   0.5 MB -> 局    9 -> 39.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j40_2019.zip:   3.4 MB -> 局   58 -> 40.json
+    j41_2019.zip:   0.9 MB -> 局   18 -> 41.json
+    j42_2019.zip:   1.4 MB -> 局   24 -> 42.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    j43_2019.zip:   1.6 MB -> 局   28 -> 43.json
+    j44_2019.zip:   1.7 MB -> 局   26 -> 44.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j45_2019.zip:   0.9 MB -> 局   21 -> 45.json
+    j46_2019.zip:   1.1 MB -> 局   19 -> 46.json
+    j47_2019.zip:   0.3 MB -> 局   10 -> 47.json
+  FY2019: 局 1,838 / 日別値 1,799,988 ({'so2': 360510, 'no2': 600972, 'ox': 438468, 'pm25': 400038})
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j01_2020.zip:   3.1 MB -> 局   85 -> 01.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j02_2020.zip:   0.6 MB -> 局   18 -> 02.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j03_2020.zip:   0.5 MB -> 局   15 -> 03.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j04_2020.zip:   1.9 MB -> 局   38 -> 04.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j05_2020.zip:   0.7 MB -> 局   17 -> 05.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    j06_2020.zip:   0.5 MB -> 局   14 -> 06.json
+    j07_2020.zip:   2.6 MB -> 局   37 -> 07.json
+    j08_2020.zip:   3.0 MB -> 局   51 -> 08.json
+    j09_2020.zip:   1.7 MB -> 局   33 -> 09.json
+    j10_2020.zip:   1.8 MB -> 局   28 -> 10.json
+    j11_2020.zip:   5.9 MB -> 局   83 -> 11.json
+    j12_2020.zip:   8.7 MB -> 局  125 -> 12.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j13_2020.zip:   6.6 MB -> 局   89 -> 13.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    j14_2020.zip:   6.1 MB -> 局   92 -> 14.json
+    j15_2020.zip:   1.4 MB -> 局   26 -> 15.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j16_2020.zip:   1.1 MB -> 局   18 -> 16.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j17_2020.zip:   1.2 MB -> 局   23 -> 17.json
+    j18_2020.zip:   1.4 MB -> 局   24 -> 18.json
+    j19_2020.zip:   0.7 MB -> 局   12 -> 19.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j20_2020.zip:   1.1 MB -> 局   21 -> 20.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j21_2020.zip:   1.2 MB -> 局   23 -> 21.json
+    j22_2020.zip:   3.3 MB -> 局   67 -> 22.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j23_2020.zip:   6.5 MB -> 局  105 -> 23.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j24_2020.zip:   2.1 MB -> 局   33 -> 24.json
+    j25_2020.zip:   0.8 MB -> 局   16 -> 25.json
+    j26_2020.zip:   1.7 MB -> 局   33 -> 26.json
+    j27_2020.zip:   6.4 MB -> 局  102 -> 27.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j28_2020.zip:   6.0 MB -> 局  102 -> 28.json
+    j29_2020.zip:   0.5 MB -> 局   12 -> 29.json
+    j30_2020.zip:   1.4 MB -> 局   33 -> 30.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    j31_2020.zip:   0.2 MB -> 局    6 -> 31.json
+    j32_2020.zip:   0.6 MB -> 局    9 -> 32.json
+    j33_2020.zip:   2.6 MB -> 局   67 -> 33.json
+    j34_2020.zip:   2.1 MB -> 局   37 -> 34.json
+    j35_2020.zip:   2.4 MB -> 局   31 -> 35.json
+    j36_2020.zip:   1.0 MB -> 局   22 -> 36.json
+    j37_2020.zip:   0.9 MB -> 局   23 -> 37.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j38_2020.zip:   1.3 MB -> 局   31 -> 38.json
+    j39_2020.zip:   0.5 MB -> 局    9 -> 39.json
+    j40_2020.zip:   3.1 MB -> 局   58 -> 40.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    再試行 5/12 (ConnectionResetError) — 16 秒待つ
+    再試行 6/12 (ConnectionResetError) — 32 秒待つ
+    再試行 7/12 (ConnectionResetError) — 64 秒待つ
+    再試行 8/12 (ConnectionResetError) — 128 秒待つ
+    j41_2020.zip:   0.8 MB -> 局   18 -> 41.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j42_2020.zip:   1.4 MB -> 局   24 -> 42.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j43_2020.zip:   1.5 MB -> 局   28 -> 43.json
+    j44_2020.zip:   1.6 MB -> 局   26 -> 44.json
+    j45_2020.zip:   0.8 MB -> 局   21 -> 45.json
+    j46_2020.zip:   1.0 MB -> 局   19 -> 46.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    再試行 5/12 (ConnectionResetError) — 16 秒待つ
+    j47_2020.zip:   0.3 MB -> 局   10 -> 47.json
+  FY2020: 局 1,814 / 日別値 1,781,565 ({'so2': 353685, 'no2': 588745, 'ox': 433620, 'pm25': 405515})
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    j01_2021.zip:   3.3 MB -> 局   85 -> 01.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j02_2021.zip:   0.7 MB -> 局   18 -> 02.json
+    j03_2021.zip:   0.5 MB -> 局   15 -> 03.json
+    j04_2021.zip:   2.0 MB -> 局   38 -> 04.json
+    j05_2021.zip:   0.7 MB -> 局   17 -> 05.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j06_2021.zip:   0.5 MB -> 局   11 -> 06.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    再試行 5/12 (ConnectionResetError) — 16 秒待つ
+    j07_2021.zip:   2.7 MB -> 局   37 -> 07.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j08_2021.zip:   3.2 MB -> 局   49 -> 08.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    再試行 5/12 (ConnectionResetError) — 16 秒待つ
+    再試行 6/12 (ConnectionResetError) — 32 秒待つ
+    再試行 7/12 (ConnectionResetError) — 64 秒待つ
+    再試行 8/12 (ConnectionResetError) — 128 秒待つ
+    再試行 9/12 (ConnectionResetError) — 256 秒待つ
+    j09_2021.zip:   1.6 MB -> 局   26 -> 09.json
+    j10_2021.zip:   1.9 MB -> 局   27 -> 10.json
+    j11_2021.zip:   6.3 MB -> 局   83 -> 11.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j12_2021.zip:   9.0 MB -> 局  122 -> 12.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j13_2021.zip:   6.9 MB -> 局   88 -> 13.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j14_2021.zip:   6.0 MB -> 局   94 -> 14.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j15_2021.zip:   1.3 MB -> 局   26 -> 15.json
+    j16_2021.zip:   1.1 MB -> 局   18 -> 16.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j17_2021.zip:   1.3 MB -> 局   23 -> 17.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j18_2021.zip:   1.4 MB -> 局   23 -> 18.json
+    j19_2021.zip:   0.7 MB -> 局   12 -> 19.json
+    j20_2021.zip:   1.3 MB -> 局   22 -> 20.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j21_2021.zip:   1.3 MB -> 局   23 -> 21.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    再試行 5/12 (ConnectionResetError) — 16 秒待つ
+    再試行 6/12 (ConnectionResetError) — 32 秒待つ
+    再試行 7/12 (ConnectionResetError) — 64 秒待つ
+    再試行 8/12 (ConnectionResetError) — 128 秒待つ
+    j22_2021.zip:   2.9 MB -> 局   67 -> 22.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j23_2021.zip:   6.8 MB -> 局  104 -> 23.json
+    j24_2021.zip:   2.0 MB -> 局   30 -> 24.json
+    j25_2021.zip:   0.9 MB -> 局   16 -> 25.json
+    j26_2021.zip:   1.8 MB -> 局   33 -> 26.json
+    j27_2021.zip:   7.8 MB -> 局   99 -> 27.json
+    j28_2021.zip:   6.3 MB -> 局  102 -> 28.json
+    j29_2021.zip:   0.5 MB -> 局   12 -> 29.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j30_2021.zip:   1.2 MB -> 局   27 -> 30.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j31_2021.zip:   0.3 MB -> 局    6 -> 31.json
+    j32_2021.zip:   0.6 MB -> 局    9 -> 32.json
+    j33_2021.zip:   2.7 MB -> 局   67 -> 33.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j34_2021.zip:   2.2 MB -> 局   37 -> 34.json
+    j35_2021.zip:   1.5 MB -> 局   31 -> 35.json
+    j36_2021.zip:   1.1 MB -> 局   22 -> 36.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j37_2021.zip:   0.9 MB -> 局   23 -> 37.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j38_2021.zip:   1.4 MB -> 局   31 -> 38.json
+    j39_2021.zip:   0.5 MB -> 局    9 -> 39.json
+    j40_2021.zip:   3.1 MB -> 局   55 -> 40.json
+    j41_2021.zip:   0.9 MB -> 局   18 -> 41.json
+    j42_2021.zip:   1.5 MB -> 局   24 -> 42.json
+    j43_2021.zip:   1.5 MB -> 局   35 -> 43.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j44_2021.zip:   1.7 MB -> 局   26 -> 44.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j45_2021.zip:   0.9 MB -> 局   21 -> 45.json
+    j46_2021.zip:   1.1 MB -> 局   19 -> 46.json
+    j47_2021.zip:   0.3 MB -> 局   10 -> 47.json
+  FY2021: 局 1,790 / 日別値 1,766,600 ({'so2': 346750, 'no2': 580350, 'ox': 431795, 'pm25': 407705})
+    j01_2022.zip:   3.4 MB -> 局   85 -> 01.json
+    j02_2022.zip:   0.7 MB -> 局   18 -> 02.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j03_2022.zip:   0.5 MB -> 局   15 -> 03.json
+    j04_2022.zip:   1.9 MB -> 局   38 -> 04.json
+    j05_2022.zip:   0.7 MB -> 局   17 -> 05.json
+    j06_2022.zip:   0.5 MB -> 局   11 -> 06.json
+    j07_2022.zip:   2.7 MB -> 局   37 -> 07.json
+    j08_2022.zip:   3.7 MB -> 局   49 -> 08.json
+    j09_2022.zip:   1.6 MB -> 局   26 -> 09.json
+    j10_2022.zip:   1.8 MB -> 局   26 -> 10.json
+    j11_2022.zip:   6.3 MB -> 局   83 -> 11.json
+    j12_2022.zip:   8.9 MB -> 局  121 -> 12.json
+    j13_2022.zip:   7.6 MB -> 局   91 -> 13.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j14_2022.zip:   6.4 MB -> 局   92 -> 14.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j15_2022.zip:   1.2 MB -> 局   26 -> 15.json
+    j16_2022.zip:   1.1 MB -> 局   18 -> 16.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j17_2022.zip:   1.3 MB -> 局   23 -> 17.json
+    j18_2022.zip:   1.4 MB -> 局   23 -> 18.json
+    j19_2022.zip:   0.7 MB -> 局   12 -> 19.json
+    j20_2022.zip:   1.2 MB -> 局   20 -> 20.json
+    j21_2022.zip:   1.5 MB -> 局   24 -> 21.json
+    j22_2022.zip:   3.1 MB -> 局   67 -> 22.json
+    j23_2022.zip:   7.9 MB -> 局  103 -> 23.json
+    j24_2022.zip:   2.2 MB -> 局   30 -> 24.json
+    j25_2022.zip:   1.0 MB -> 局   16 -> 25.json
+    j26_2022.zip:   1.8 MB -> 局   33 -> 26.json
+    j27_2022.zip:   6.5 MB -> 局  100 -> 27.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+Traceback (most recent call last):
+  File "C:\_ClaudeCode\japan-weather-atmosphere-atlas\scripts\ingest\nies_air.py", line 196, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "C:\_ClaudeCode\japan-weather-atmosphere-atlas\scripts\ingest\nies_air.py", line 189, in main
+    ingest_year(fetcher, year, args.min_coverage)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\_ClaudeCode\japan-weather-atmosphere-atlas\scripts\ingest\nies_air.py", line 133, in ingest_year
+    rows = [r for r in parse_hourly_file(text)
+                       ~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\_ClaudeCode\japan-weather-atmosphere-atlas\jwaa\nies.py", line 251, in parse_hourly_file
+    except ValueError:
+                ^^^^^^
+    ...<2 lines>...
+    item = _need(row, "測定項目コード")
+    ^^^^^^^^^^^^^
+jwaa.nies.SentinelError: 2022-04-29 PRS に未知の値 9992.0 が出た(定義は [9997, 9998, 9999])
+測定局マスタ FY2023: 47 ファイル
+-> C:\_ClaudeCode\japan-weather-atmosphere-atlas\data\processed\nies_stations.json (1,773 局)
+  FY2014: 局 1,898 / 日別値 0 ({})
+  FY2015: 局 1,879 / 日別値 0 ({})
+  FY2016: 局 1,866 / 日別値 0 ({})
+  FY2017: 局 1,861 / 日別値 0 ({})
+  FY2018: 局 1,864 / 日別値 0 ({})
+  FY2019: 局 1,838 / 日別値 0 ({})
+  FY2020: 局 1,814 / 日別値 0 ({})
+  FY2021: 局 1,790 / 日別値 0 ({})
+    j28_2022.zip:   6.1 MB -> 局  101 -> 28.json
+    j29_2022.zip:   0.5 MB -> 局   12 -> 29.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j30_2022.zip:   1.2 MB -> 局   26 -> 30.json
+    j31_2022.zip:   0.3 MB -> 局    6 -> 31.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j32_2022.zip:   0.6 MB -> 局    9 -> 32.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j33_2022.zip:   2.6 MB -> 局   66 -> 33.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j34_2022.zip:   2.2 MB -> 局   37 -> 34.json
+    j35_2022.zip:   1.5 MB -> 局   31 -> 35.json
+    j36_2022.zip:   1.1 MB -> 局   22 -> 36.json
+    j37_2022.zip:   1.0 MB -> 局   20 -> 37.json
+    j38_2022.zip:   1.6 MB -> 局   30 -> 38.json
+    j39_2022.zip:   0.5 MB -> 局    9 -> 39.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j40_2022.zip:   3.1 MB -> 局   55 -> 40.json
+    j41_2022.zip:   0.9 MB -> 局   18 -> 41.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j42_2022.zip:   1.4 MB -> 局   24 -> 42.json
+    j43_2022.zip:   1.7 MB -> 局   35 -> 43.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j44_2022.zip:   1.7 MB -> 局   26 -> 44.json
+    j45_2022.zip:   0.8 MB -> 局   21 -> 45.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j46_2022.zip:   1.0 MB -> 局   18 -> 46.json
+    j47_2022.zip:   0.3 MB -> 局   10 -> 47.json
+  FY2022: 局 1,780 / 日別値 585,460 ({'so2': 139795, 'no2': 178120, 'ox': 136510, 'pm25': 131035})
+    j01_2023.zip:   3.6 MB -> 局   84 -> 01.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j02_2023.zip:   0.7 MB -> 局   18 -> 02.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j03_2023.zip:   0.6 MB -> 局   15 -> 03.json
+    j04_2023.zip:   2.0 MB -> 局   38 -> 04.json
+    j05_2023.zip:   0.8 MB -> 局   17 -> 05.json
+    j06_2023.zip:   0.5 MB -> 局   11 -> 06.json
+    j07_2023.zip:   3.0 MB -> 局   37 -> 07.json
+    j08_2023.zip:   3.2 MB -> 局   49 -> 08.json
+    j09_2023.zip:   1.6 MB -> 局   25 -> 09.json
+    j10_2023.zip:   2.0 MB -> 局   26 -> 10.json
+    j11_2023.zip:   6.6 MB -> 局   81 -> 11.json
+    j12_2023.zip:   8.7 MB -> 局  115 -> 12.json
+    j13_2023.zip:   7.2 MB -> 局   86 -> 13.json
+    j14_2023.zip:   6.4 MB -> 局   92 -> 14.json
+    j15_2023.zip:   1.2 MB -> 局   26 -> 15.json
+    j16_2023.zip:   1.2 MB -> 局   18 -> 16.json
+    j17_2023.zip:   1.4 MB -> 局   23 -> 17.json
+    j18_2023.zip:   1.5 MB -> 局   23 -> 18.json
+    j19_2023.zip:   0.8 MB -> 局   12 -> 19.json
+    j20_2023.zip:   1.2 MB -> 局   20 -> 20.json
+    j21_2023.zip:   1.4 MB -> 局   25 -> 21.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j22_2023.zip:   3.8 MB -> 局   67 -> 22.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j23_2023.zip:   7.2 MB -> 局  103 -> 23.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    再試行 5/12 (ConnectionResetError) — 16 秒待つ
+    j24_2023.zip:   2.1 MB -> 局   30 -> 24.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j25_2023.zip:   0.9 MB -> 局   16 -> 25.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j26_2023.zip:   1.8 MB -> 局   33 -> 26.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j27_2023.zip:   6.3 MB -> 局   95 -> 27.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j28_2023.zip:   6.5 MB -> 局  100 -> 28.json
+    j29_2023.zip:   0.6 MB -> 局   12 -> 29.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    j30_2023.zip:   1.3 MB -> 局   26 -> 30.json
+    j31_2023.zip:   0.3 MB -> 局    6 -> 31.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+測定局マスタ FY2023: 47 ファイル
+-> C:\_ClaudeCode\japan-weather-atmosphere-atlas\data\processed\nies_stations.json (1,773 局)
+  FY2014: 局 1,898 / 日別値 0 ({})
+  FY2015: 局 1,879 / 日別値 0 ({})
+  FY2016: 局 1,866 / 日別値 0 ({})
+  FY2017: 局 1,861 / 日別値 0 ({})
+  FY2018: 局 1,864 / 日別値 0 ({})
+  FY2019: 局 1,838 / 日別値 0 ({})
+  FY2020: 局 1,814 / 日別値 0 ({})
+  FY2021: 局 1,790 / 日別値 0 ({})
+  FY2022: 局 1,780 / 日別値 0 ({})
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    再試行 5/12 (ConnectionResetError) — 16 秒待つ
+    再試行 6/12 (ConnectionResetError) — 32 秒待つ
+    再試行 7/12 (ConnectionResetError) — 64 秒待つ
+    再試行 8/12 (ConnectionResetError) — 128 秒待つ
+    再試行 9/12 (ConnectionResetError) — 256 秒待つ
+    j32_2023.zip:   0.7 MB -> 局    9 -> 32.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j33_2023.zip:   2.7 MB -> 局   62 -> 33.json
+    j34_2023.zip:   2.2 MB -> 局   37 -> 34.json
+    j35_2023.zip:   2.5 MB -> 局   31 -> 35.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j36_2023.zip:   1.1 MB -> 局   22 -> 36.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    j37_2023.zip:   0.9 MB -> 局   20 -> 37.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    j38_2023.zip:   1.3 MB -> 局   24 -> 38.json
+    再試行 1/12 (ConnectionResetError) — 1 秒待つ
+    再試行 2/12 (ConnectionResetError) — 2 秒待つ
+    再試行 3/12 (ConnectionResetError) — 4 秒待つ
+    再試行 4/12 (ConnectionResetError) — 8 秒待つ
+    再試行 5/12 (ConnectionResetError) — 16 秒待つ
+    再試行 6/12 (ConnectionResetError) — 32 秒待つ
+    再試行 7/12 (ConnectionResetError) — 64 秒待つ
+    再試行 8/12 (ConnectionResetError) — 128 秒待つ
+    再試行 9/12 (ConnectionResetError) — 256 秒待つ
+    再試行 10/12 (ConnectionResetError) — 300 秒待つ

@@ -1,0 +1,37 @@
+
+> japan-weather-atmosphere-atlas@0.1.0 build
+> next build
+
+   ▲ Next.js 15.5.25
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 25.3s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/10) ...
+   Generating static pages (2/10) 
+   Generating static pages (4/10) 
+   Generating static pages (7/10) 
+ ✓ Generating static pages (10/10)
+   Finalizing page optimization ...
+   Collecting build traces ...
+   Exporting (0/2) ...
+ ✓ Exporting (2/2)
+
+Route (app)                                 Size  First Load JS
+┌ ○ /                                      130 B         103 kB
+├ ○ /_not-found                            993 B         104 kB
+├ ○ /about                                 130 B         103 kB
+├ ○ /compare                             4.04 kB         107 kB
+├ ○ /data-policy                           130 B         103 kB
+├ ○ /ghg                                 2.52 kB         105 kB
+├ ○ /map                                 6.04 kB         109 kB
+└ ○ /patterns                             4.1 kB         107 kB
++ First Load JS shared by all             103 kB
+  ├ chunks/255-a85cef9cc3a04b12.js       46.5 kB
+  ├ chunks/4bd1b696-c023c6e3521b1417.js  54.2 kB
+  └ other shared chunks (total)          2.07 kB
+
+
+○  (Static)  prerendered as static content
+

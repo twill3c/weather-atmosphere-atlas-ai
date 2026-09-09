@@ -1,0 +1,1402 @@
+{
+ "source": "国土地理院 逆ジオコーダ",
+ "note": "気象官署の座標から都道府県を決めた。prec_no は予報区であって県ではない",
+ "unresolved": [],
+ "stations": {
+  "47401": {
+   "block_no": "47401",
+   "name": "稚内",
+   "pref_code": "01",
+   "pref_name": "北海道",
+   "muni_code": "01214",
+   "muni_name": "開運二丁目",
+   "offset_km": 0.0
+  },
+  "47402": {
+   "block_no": "47402",
+   "name": "北見枝幸",
+   "pref_code": "01",
+   "pref_name": "北海道",
+   "muni_code": "01514",
+   "muni_name": "本町",
+   "offset_km": 0.0
+  },
+  "47404": {
+   "block_no": "47404",
+   "name": "羽幌",
+   "pref_code": "01",
+   "pref_name": "北海道",
+   "muni_code": "01484",
+   "muni_name": "南大通四丁目",
+   "offset_km": 0.0
+  },
+  "47405": {
+   "block_no": "47405",
+   "name": "雄武",
+   "pref_code": "01",
+   "pref_name": "北海道",
+   "muni_code": "01563",
+   "muni_name": "字雄武",
+   "offset_km": 0.0
+  },
+  "47406": {
+   "block_no": "47406",
+   "name": "留萌",
+   "pref_code": "01",
+   "pref_name": "北海道",
+   "muni_code": "01212",
+   "muni_name": "瀬越町",
+   "offset_km": 0.0
+  },
+  "47407": {
+   "block_no": "47407",
+   "name": "旭川",
+   "pref_code": "01",
+   "pref_name": "北海道",
+   "muni_code": "01204",
+   "muni_name": "宮前一条三丁目",
+   "offset_km": 0.0
+  },
+  "47409": {
+   "block_no": "47409",
+   "name": "網走",
+   "pref_code": "01",
+   "pref_name": "北海道",
+   "muni_code": "01211",
+   "muni_name": "台町一丁目",
+   "offset_km": 0.0
+  },
+  "47411": {
+   "block_no": "47411",
+   "name": "小樽",
+   "pref_code": "01",
+   "pref_name": "北海道",
+   "muni_code": "01203",
+   "muni_name": "新富町",
+   "offset_km": 0.0
+  },
+  "47412": {
+   "block_no": "47412",
+   "name": "札幌",
+   "pref_code": "01",
+   "pref_name": "北海道",
+   "muni_code": "01101",
+   "muni_name": "北一条西十八丁目",
+   "offset_km": 0.0
+  },
+  "47413": {
+   "block_no": "47413",
+   "name": "岩見沢",
+   "pref_code": "01",
+   "pref_name": "北海道",
+   "muni_code": "01210",
+   "muni_name": "五条東十五丁目",
+   "offset_km": 0.0
+  },
+  "47417": {
+   "block_no": "47417",
+   "name": "帯広",
+   "pref_code": "01",
+   "pref_name": "北海道",
+   "muni_code": "01207",
+   "muni_name": "東四条南十丁目",
+   "offset_km": 0.0
+  },
+  "47418": {
+   "block_no": "47418",
+   "name": "釧路",
+   "pref_code": "01",
+   "pref_name": "北海道",
+   "muni_code": "01206",
+   "muni_name": "浪花町八丁目",
+   "offset_km": 0.0
+  },
+  "47420": {
+   "block_no": "47420",
+   "name": "根室",
+   "pref_code": "01",
+   "pref_name": "北海道",
+   "muni_code": "01223",
+   "muni_name": "大正町一丁目",
+   "offset_km": 0.0
+  },
+  "47421": {
+   "block_no": "47421",
+   "name": "寿都",
+   "pref_code": "01",
+   "pref_name": "北海道",
+   "muni_code": "01392",
+   "muni_name": "字新栄町",
+   "offset_km": 0.0
+  },
+  "47423": {
+   "block_no": "47423",
+   "name": "室蘭",
+   "pref_code": "01",
+   "pref_name": "北海道",
+   "muni_code": "01205",
+   "muni_name": "舟見町二丁目",
+   "offset_km": 0.0
+  },
+  "47424": {
+   "block_no": "47424",
+   "name": "苫小牧",
+   "pref_code": "01",
+   "pref_name": "北海道",
+   "muni_code": "01213",
+   "muni_name": "しらかば町一丁目",
+   "offset_km": 0.0
+  },
+  "47426": {
+   "block_no": "47426",
+   "name": "浦河",
+   "pref_code": "01",
+   "pref_name": "北海道",
+   "muni_code": "01607",
+   "muni_name": "潮見町",
+   "offset_km": 0.0
+  },
+  "47428": {
+   "block_no": "47428",
+   "name": "江差",
+   "pref_code": "01",
+   "pref_name": "北海道",
+   "muni_code": "01361",
+   "muni_name": "字姥神町",
+   "offset_km": 0.0
+  },
+  "47430": {
+   "block_no": "47430",
+   "name": "函館",
+   "pref_code": "01",
+   "pref_name": "北海道",
+   "muni_code": "01202",
+   "muni_name": "美原三丁目",
+   "offset_km": 0.0
+  },
+  "47433": {
+   "block_no": "47433",
+   "name": "倶知安",
+   "pref_code": "01",
+   "pref_name": "北海道",
+   "muni_code": "01400",
+   "muni_name": "南二条東二丁目",
+   "offset_km": 0.0
+  },
+  "47435": {
+   "block_no": "47435",
+   "name": "紋別",
+   "pref_code": "01",
+   "pref_name": "北海道",
+   "muni_code": "01219",
+   "muni_name": "南が丘町一丁目",
+   "offset_km": 0.0
+  },
+  "47440": {
+   "block_no": "47440",
+   "name": "広尾",
+   "pref_code": "01",
+   "pref_name": "北海道",
+   "muni_code": "01642",
+   "muni_name": "東三条十二丁目",
+   "offset_km": 0.0
+  },
+  "47512": {
+   "block_no": "47512",
+   "name": "大船渡",
+   "pref_code": "03",
+   "pref_name": "岩手県",
+   "muni_code": "03203",
+   "muni_name": "大船渡町",
+   "offset_km": 0.0
+  },
+  "47520": {
+   "block_no": "47520",
+   "name": "新庄",
+   "pref_code": "06",
+   "pref_name": "山形県",
+   "muni_code": "06205",
+   "muni_name": "金沢",
+   "offset_km": 0.0
+  },
+  "47570": {
+   "block_no": "47570",
+   "name": "若松",
+   "pref_code": "07",
+   "pref_name": "福島県",
+   "muni_code": "07202",
+   "muni_name": "材木町一丁目",
+   "offset_km": 0.0
+  },
+  "47574": {
+   "block_no": "47574",
+   "name": "深浦",
+   "pref_code": "02",
+   "pref_name": "青森県",
+   "muni_code": "02323",
+   "muni_name": "大字深浦",
+   "offset_km": 0.0
+  },
+  "47575": {
+   "block_no": "47575",
+   "name": "青森",
+   "pref_code": "02",
+   "pref_name": "青森県",
+   "muni_code": "02201",
+   "muni_name": "花園一丁目",
+   "offset_km": 0.0
+  },
+  "47576": {
+   "block_no": "47576",
+   "name": "むつ",
+   "pref_code": "02",
+   "pref_name": "青森県",
+   "muni_code": "02208",
+   "muni_name": "金曲一丁目",
+   "offset_km": 0.0
+  },
+  "47581": {
+   "block_no": "47581",
+   "name": "八戸",
+   "pref_code": "02",
+   "pref_name": "青森県",
+   "muni_code": "02203",
+   "muni_name": "大字湊町",
+   "offset_km": 0.0
+  },
+  "47582": {
+   "block_no": "47582",
+   "name": "秋田",
+   "pref_code": "05",
+   "pref_name": "秋田県",
+   "muni_code": "05201",
+   "muni_name": "山王六丁目",
+   "offset_km": 0.0
+  },
+  "47584": {
+   "block_no": "47584",
+   "name": "盛岡",
+   "pref_code": "03",
+   "pref_name": "岩手県",
+   "muni_code": "03201",
+   "muni_name": "山王町",
+   "offset_km": 0.0
+  },
+  "47585": {
+   "block_no": "47585",
+   "name": "宮古",
+   "pref_code": "03",
+   "pref_name": "岩手県",
+   "muni_code": "03202",
+   "muni_name": "鍬ヶ崎下町",
+   "offset_km": 0.0
+  },
+  "47587": {
+   "block_no": "47587",
+   "name": "酒田",
+   "pref_code": "06",
+   "pref_name": "山形県",
+   "muni_code": "06204",
+   "muni_name": "亀ケ崎一丁目",
+   "offset_km": 0.0
+  },
+  "47588": {
+   "block_no": "47588",
+   "name": "山形",
+   "pref_code": "06",
+   "pref_name": "山形県",
+   "muni_code": "06201",
+   "muni_name": "緑町一丁目",
+   "offset_km": 0.0
+  },
+  "47590": {
+   "block_no": "47590",
+   "name": "仙台",
+   "pref_code": "04",
+   "pref_name": "宮城県",
+   "muni_code": "04102",
+   "muni_name": "五輪一丁目",
+   "offset_km": 0.0
+  },
+  "47592": {
+   "block_no": "47592",
+   "name": "石巻",
+   "pref_code": "04",
+   "pref_name": "宮城県",
+   "muni_code": "04202",
+   "muni_name": "泉町四丁目",
+   "offset_km": 0.0
+  },
+  "47595": {
+   "block_no": "47595",
+   "name": "福島",
+   "pref_code": "07",
+   "pref_name": "福島県",
+   "muni_code": "07201",
+   "muni_name": "新浜町",
+   "offset_km": 0.0
+  },
+  "47597": {
+   "block_no": "47597",
+   "name": "白河",
+   "pref_code": "07",
+   "pref_name": "福島県",
+   "muni_code": "07205",
+   "muni_name": "郭内",
+   "offset_km": 0.0
+  },
+  "47598": {
+   "block_no": "47598",
+   "name": "小名浜",
+   "pref_code": "07",
+   "pref_name": "福島県",
+   "muni_code": "07204",
+   "muni_name": "小名浜",
+   "offset_km": 0.0
+  },
+  "47600": {
+   "block_no": "47600",
+   "name": "輪島",
+   "pref_code": "17",
+   "pref_name": "石川県",
+   "muni_code": "17204",
+   "muni_name": "堀町",
+   "offset_km": 0.0
+  },
+  "47602": {
+   "block_no": "47602",
+   "name": "相川",
+   "pref_code": "15",
+   "pref_name": "新潟県",
+   "muni_code": "15224",
+   "muni_name": "相川下戸浜町",
+   "offset_km": 0.0
+  },
+  "47604": {
+   "block_no": "47604",
+   "name": "新潟",
+   "pref_code": "15",
+   "pref_name": "新潟県",
+   "muni_code": "15103",
+   "muni_name": "美咲町一丁目",
+   "offset_km": 0.0
+  },
+  "47605": {
+   "block_no": "47605",
+   "name": "金沢",
+   "pref_code": "17",
+   "pref_name": "石川県",
+   "muni_code": "17201",
+   "muni_name": "西念四丁目",
+   "offset_km": 0.0
+  },
+  "47606": {
+   "block_no": "47606",
+   "name": "伏木",
+   "pref_code": "16",
+   "pref_name": "富山県",
+   "muni_code": "16202",
+   "muni_name": "伏木古府二丁目",
+   "offset_km": 0.0
+  },
+  "47607": {
+   "block_no": "47607",
+   "name": "富山",
+   "pref_code": "16",
+   "pref_name": "富山県",
+   "muni_code": "16201",
+   "muni_name": "田刈屋",
+   "offset_km": 0.0
+  },
+  "47610": {
+   "block_no": "47610",
+   "name": "長野",
+   "pref_code": "20",
+   "pref_name": "長野県",
+   "muni_code": "20201",
+   "muni_name": "箱清水一丁目",
+   "offset_km": 0.0
+  },
+  "47612": {
+   "block_no": "47612",
+   "name": "高田",
+   "pref_code": "15",
+   "pref_name": "新潟県",
+   "muni_code": "15222",
+   "muni_name": "大手町",
+   "offset_km": 0.0
+  },
+  "47615": {
+   "block_no": "47615",
+   "name": "宇都宮",
+   "pref_code": "09",
+   "pref_name": "栃木県",
+   "muni_code": "09201",
+   "muni_name": "明保野町",
+   "offset_km": 0.0
+  },
+  "47616": {
+   "block_no": "47616",
+   "name": "福井",
+   "pref_code": "18",
+   "pref_name": "福井県",
+   "muni_code": "18201",
+   "muni_name": "豊島二丁目",
+   "offset_km": 0.0
+  },
+  "47617": {
+   "block_no": "47617",
+   "name": "高山",
+   "pref_code": "21",
+   "pref_name": "岐阜県",
+   "muni_code": "21203",
+   "muni_name": "桐生町二丁目",
+   "offset_km": 0.0
+  },
+  "47618": {
+   "block_no": "47618",
+   "name": "松本",
+   "pref_code": "20",
+   "pref_name": "長野県",
+   "muni_code": "20202",
+   "muni_name": "沢村一丁目",
+   "offset_km": 0.0
+  },
+  "47620": {
+   "block_no": "47620",
+   "name": "諏訪",
+   "pref_code": "20",
+   "pref_name": "長野県",
+   "muni_code": "20206",
+   "muni_name": "湖岸通り五丁目",
+   "offset_km": 0.0
+  },
+  "47622": {
+   "block_no": "47622",
+   "name": "軽井沢",
+   "pref_code": "20",
+   "pref_name": "長野県",
+   "muni_code": "20321",
+   "muni_name": "大字追分",
+   "offset_km": 0.0
+  },
+  "47624": {
+   "block_no": "47624",
+   "name": "前橋",
+   "pref_code": "10",
+   "pref_name": "群馬県",
+   "muni_code": "10201",
+   "muni_name": "昭和町三丁目",
+   "offset_km": 0.0
+  },
+  "47626": {
+   "block_no": "47626",
+   "name": "熊谷",
+   "pref_code": "11",
+   "pref_name": "埼玉県",
+   "muni_code": "11202",
+   "muni_name": "石原三丁目",
+   "offset_km": 0.0
+  },
+  "47629": {
+   "block_no": "47629",
+   "name": "水戸",
+   "pref_code": "08",
+   "pref_name": "茨城県",
+   "muni_code": "08201",
+   "muni_name": "五軒町一丁目",
+   "offset_km": 0.0
+  },
+  "47631": {
+   "block_no": "47631",
+   "name": "敦賀",
+   "pref_code": "18",
+   "pref_name": "福井県",
+   "muni_code": "18202",
+   "muni_name": "松栄町",
+   "offset_km": 0.0
+  },
+  "47632": {
+   "block_no": "47632",
+   "name": "岐阜",
+   "pref_code": "21",
+   "pref_name": "岐阜県",
+   "muni_code": "21201",
+   "muni_name": "加納丸之内",
+   "offset_km": 0.0
+  },
+  "47636": {
+   "block_no": "47636",
+   "name": "名古屋",
+   "pref_code": "23",
+   "pref_name": "愛知県",
+   "muni_code": "23101",
+   "muni_name": "本山町一丁目",
+   "offset_km": 0.0
+  },
+  "47637": {
+   "block_no": "47637",
+   "name": "飯田",
+   "pref_code": "20",
+   "pref_name": "長野県",
+   "muni_code": "20205",
+   "muni_name": "高羽町六丁目",
+   "offset_km": 0.0
+  },
+  "47638": {
+   "block_no": "47638",
+   "name": "甲府",
+   "pref_code": "19",
+   "pref_name": "山梨県",
+   "muni_code": "19201",
+   "muni_name": "飯田四丁目",
+   "offset_km": 0.0
+  },
+  "47639": {
+   "block_no": "47639",
+   "name": "富士山",
+   "pref_code": "22",
+   "pref_name": "静岡県",
+   "muni_code": "22210",
+   "muni_name": "大渕",
+   "offset_km": 1.0
+  },
+  "47640": {
+   "block_no": "47640",
+   "name": "河口湖",
+   "pref_code": "19",
+   "pref_name": "山梨県",
+   "muni_code": "19430",
+   "muni_name": "船津",
+   "offset_km": 0.0
+  },
+  "47641": {
+   "block_no": "47641",
+   "name": "秩父",
+   "pref_code": "11",
+   "pref_name": "埼玉県",
+   "muni_code": "11207",
+   "muni_name": "上町三丁目",
+   "offset_km": 0.0
+  },
+  "47646": {
+   "block_no": "47646",
+   "name": "つくば（館野）",
+   "pref_code": "08",
+   "pref_name": "茨城県",
+   "muni_code": "08220",
+   "muni_name": "長峰",
+   "offset_km": 0.0
+  },
+  "47648": {
+   "block_no": "47648",
+   "name": "銚子",
+   "pref_code": "12",
+   "pref_name": "千葉県",
+   "muni_code": "12202",
+   "muni_name": "明神町二丁目",
+   "offset_km": 0.0
+  },
+  "47649": {
+   "block_no": "47649",
+   "name": "上野",
+   "pref_code": "24",
+   "pref_name": "三重県",
+   "muni_code": "24216",
+   "muni_name": "緑ケ丘本町",
+   "offset_km": 0.0
+  },
+  "47651": {
+   "block_no": "47651",
+   "name": "津",
+   "pref_code": "24",
+   "pref_name": "三重県",
+   "muni_code": "24201",
+   "muni_name": "桜橋三丁目",
+   "offset_km": 0.0
+  },
+  "47653": {
+   "block_no": "47653",
+   "name": "伊良湖",
+   "pref_code": "23",
+   "pref_name": "愛知県",
+   "muni_code": "23231",
+   "muni_name": "福江町",
+   "offset_km": 0.0
+  },
+  "47654": {
+   "block_no": "47654",
+   "name": "浜松",
+   "pref_code": "22",
+   "pref_name": "静岡県",
+   "muni_code": "22138",
+   "muni_name": "高丘東一丁目",
+   "offset_km": 0.0
+  },
+  "47655": {
+   "block_no": "47655",
+   "name": "御前崎",
+   "pref_code": "22",
+   "pref_name": "静岡県",
+   "muni_code": "22223",
+   "muni_name": "御前崎",
+   "offset_km": 0.0
+  },
+  "47656": {
+   "block_no": "47656",
+   "name": "静岡",
+   "pref_code": "22",
+   "pref_name": "静岡県",
+   "muni_code": "22102",
+   "muni_name": "小黒一丁目",
+   "offset_km": 0.0
+  },
+  "47657": {
+   "block_no": "47657",
+   "name": "三島",
+   "pref_code": "22",
+   "pref_name": "静岡県",
+   "muni_code": "22206",
+   "muni_name": "東本町二丁目",
+   "offset_km": 0.0
+  },
+  "47662": {
+   "block_no": "47662",
+   "name": "東京",
+   "pref_code": "13",
+   "pref_name": "東京都",
+   "muni_code": "13101",
+   "muni_name": "北の丸公園",
+   "offset_km": 0.0
+  },
+  "47663": {
+   "block_no": "47663",
+   "name": "尾鷲",
+   "pref_code": "24",
+   "pref_name": "三重県",
+   "muni_code": "24209",
+   "muni_name": "小川東町",
+   "offset_km": 0.0
+  },
+  "47666": {
+   "block_no": "47666",
+   "name": "石廊崎",
+   "pref_code": "22",
+   "pref_name": "静岡県",
+   "muni_code": "22304",
+   "muni_name": "石廊崎",
+   "offset_km": 0.0
+  },
+  "47668": {
+   "block_no": "47668",
+   "name": "網代",
+   "pref_code": "22",
+   "pref_name": "静岡県",
+   "muni_code": "22205",
+   "muni_name": "網代",
+   "offset_km": 0.0
+  },
+  "47670": {
+   "block_no": "47670",
+   "name": "横浜",
+   "pref_code": "14",
+   "pref_name": "神奈川県",
+   "muni_code": "14104",
+   "muni_name": "元町一丁目",
+   "offset_km": 0.0
+  },
+  "47672": {
+   "block_no": "47672",
+   "name": "館山",
+   "pref_code": "12",
+   "pref_name": "千葉県",
+   "muni_code": "12205",
+   "muni_name": "長須賀",
+   "offset_km": 0.0
+  },
+  "47674": {
+   "block_no": "47674",
+   "name": "勝浦",
+   "pref_code": "12",
+   "pref_name": "千葉県",
+   "muni_code": "12218",
+   "muni_name": "墨名",
+   "offset_km": 0.0
+  },
+  "47675": {
+   "block_no": "47675",
+   "name": "大島",
+   "pref_code": "13",
+   "pref_name": "東京都",
+   "muni_code": "13361",
+   "muni_name": "元町",
+   "offset_km": 0.0
+  },
+  "47677": {
+   "block_no": "47677",
+   "name": "三宅島",
+   "pref_code": "13",
+   "pref_name": "東京都",
+   "muni_code": "13381",
+   "muni_name": "神着",
+   "offset_km": 0.0
+  },
+  "47678": {
+   "block_no": "47678",
+   "name": "八丈島",
+   "pref_code": "13",
+   "pref_name": "東京都",
+   "muni_code": "13401",
+   "muni_name": "大賀郷",
+   "offset_km": 0.0
+  },
+  "47682": {
+   "block_no": "47682",
+   "name": "千葉",
+   "pref_code": "12",
+   "pref_name": "千葉県",
+   "muni_code": "12101",
+   "muni_name": "中央港一丁目",
+   "offset_km": 0.0
+  },
+  "47684": {
+   "block_no": "47684",
+   "name": "四日市",
+   "pref_code": "24",
+   "pref_name": "三重県",
+   "muni_code": "24202",
+   "muni_name": "大字日永",
+   "offset_km": 0.0
+  },
+  "47690": {
+   "block_no": "47690",
+   "name": "奥日光（日光）",
+   "pref_code": "09",
+   "pref_name": "栃木県",
+   "muni_code": "09206",
+   "muni_name": "中宮祠",
+   "offset_km": 0.0
+  },
+  "47740": {
+   "block_no": "47740",
+   "name": "西郷",
+   "pref_code": "32",
+   "pref_name": "島根県",
+   "muni_code": "32528",
+   "muni_name": "西町",
+   "offset_km": 0.0
+  },
+  "47741": {
+   "block_no": "47741",
+   "name": "松江",
+   "pref_code": "32",
+   "pref_name": "島根県",
+   "muni_code": "32201",
+   "muni_name": "西津田七丁目",
+   "offset_km": 0.0
+  },
+  "47742": {
+   "block_no": "47742",
+   "name": "境",
+   "pref_code": "31",
+   "pref_name": "鳥取県",
+   "muni_code": "31204",
+   "muni_name": "元町",
+   "offset_km": 0.0
+  },
+  "47744": {
+   "block_no": "47744",
+   "name": "米子",
+   "pref_code": "31",
+   "pref_name": "鳥取県",
+   "muni_code": "31202",
+   "muni_name": "博労町三丁目",
+   "offset_km": 0.0
+  },
+  "47746": {
+   "block_no": "47746",
+   "name": "鳥取",
+   "pref_code": "31",
+   "pref_name": "鳥取県",
+   "muni_code": "31201",
+   "muni_name": "南吉方三丁目",
+   "offset_km": 0.0
+  },
+  "47747": {
+   "block_no": "47747",
+   "name": "豊岡",
+   "pref_code": "28",
+   "pref_name": "兵庫県",
+   "muni_code": "28209",
+   "muni_name": "桜町",
+   "offset_km": 0.0
+  },
+  "47750": {
+   "block_no": "47750",
+   "name": "舞鶴",
+   "pref_code": "26",
+   "pref_name": "京都府",
+   "muni_code": "26202",
+   "muni_name": "字下福井",
+   "offset_km": 0.0
+  },
+  "47754": {
+   "block_no": "47754",
+   "name": "萩",
+   "pref_code": "35",
+   "pref_name": "山口県",
+   "muni_code": "35204",
+   "muni_name": "大字土原",
+   "offset_km": 0.0
+  },
+  "47755": {
+   "block_no": "47755",
+   "name": "浜田",
+   "pref_code": "32",
+   "pref_name": "島根県",
+   "muni_code": "32202",
+   "muni_name": "大辻町",
+   "offset_km": 0.0
+  },
+  "47756": {
+   "block_no": "47756",
+   "name": "津山",
+   "pref_code": "33",
+   "pref_name": "岡山県",
+   "muni_code": "33203",
+   "muni_name": "林田",
+   "offset_km": 0.0
+  },
+  "47759": {
+   "block_no": "47759",
+   "name": "京都",
+   "pref_code": "26",
+   "pref_name": "京都府",
+   "muni_code": "26104",
+   "muni_name": "西ノ京東中合町",
+   "offset_km": 0.0
+  },
+  "47761": {
+   "block_no": "47761",
+   "name": "彦根",
+   "pref_code": "25",
+   "pref_name": "滋賀県",
+   "muni_code": "25202",
+   "muni_name": "栄町二丁目",
+   "offset_km": 0.0
+  },
+  "47762": {
+   "block_no": "47762",
+   "name": "下関",
+   "pref_code": "35",
+   "pref_name": "山口県",
+   "muni_code": "35201",
+   "muni_name": "竹崎町四丁目",
+   "offset_km": 0.0
+  },
+  "47765": {
+   "block_no": "47765",
+   "name": "広島",
+   "pref_code": "34",
+   "pref_name": "広島県",
+   "muni_code": "34101",
+   "muni_name": "基町",
+   "offset_km": 0.0
+  },
+  "47766": {
+   "block_no": "47766",
+   "name": "呉",
+   "pref_code": "34",
+   "pref_name": "広島県",
+   "muni_code": "34202",
+   "muni_name": "両城二丁目",
+   "offset_km": 1.0
+  },
+  "47767": {
+   "block_no": "47767",
+   "name": "福山",
+   "pref_code": "34",
+   "pref_name": "広島県",
+   "muni_code": "34207",
+   "muni_name": "松永町二丁目",
+   "offset_km": 0.0
+  },
+  "47768": {
+   "block_no": "47768",
+   "name": "岡山",
+   "pref_code": "33",
+   "pref_name": "岡山県",
+   "muni_code": "33101",
+   "muni_name": "学南町三丁目",
+   "offset_km": 0.0
+  },
+  "47769": {
+   "block_no": "47769",
+   "name": "姫路",
+   "pref_code": "28",
+   "pref_name": "兵庫県",
+   "muni_code": "28201",
+   "muni_name": "神子岡前三丁目",
+   "offset_km": 0.0
+  },
+  "47770": {
+   "block_no": "47770",
+   "name": "神戸",
+   "pref_code": "28",
+   "pref_name": "兵庫県",
+   "muni_code": "28110",
+   "muni_name": "脇浜海岸通一丁目",
+   "offset_km": 0.0
+  },
+  "47772": {
+   "block_no": "47772",
+   "name": "大阪",
+   "pref_code": "27",
+   "pref_name": "大阪府",
+   "muni_code": "27128",
+   "muni_name": "大手前四丁目",
+   "offset_km": 0.0
+  },
+  "47776": {
+   "block_no": "47776",
+   "name": "洲本",
+   "pref_code": "28",
+   "pref_name": "兵庫県",
+   "muni_code": "28205",
+   "muni_name": "木戸",
+   "offset_km": 0.0
+  },
+  "47777": {
+   "block_no": "47777",
+   "name": "和歌山",
+   "pref_code": "30",
+   "pref_name": "和歌山県",
+   "muni_code": "30201",
+   "muni_name": "東長町一丁目",
+   "offset_km": 0.0
+  },
+  "47778": {
+   "block_no": "47778",
+   "name": "潮岬",
+   "pref_code": "30",
+   "pref_name": "和歌山県",
+   "muni_code": "30428",
+   "muni_name": "潮岬",
+   "offset_km": 0.0
+  },
+  "47780": {
+   "block_no": "47780",
+   "name": "奈良",
+   "pref_code": "29",
+   "pref_name": "奈良県",
+   "muni_code": "29201",
+   "muni_name": "東紀寺町一丁目",
+   "offset_km": 0.0
+  },
+  "47784": {
+   "block_no": "47784",
+   "name": "山口",
+   "pref_code": "35",
+   "pref_name": "山口県",
+   "muni_code": "35203",
+   "muni_name": "前町",
+   "offset_km": 0.0
+  },
+  "47800": {
+   "block_no": "47800",
+   "name": "厳原",
+   "pref_code": "42",
+   "pref_name": "長崎県",
+   "muni_code": "42209",
+   "muni_name": "厳原町天道茂",
+   "offset_km": 1.0
+  },
+  "47805": {
+   "block_no": "47805",
+   "name": "平戸",
+   "pref_code": "42",
+   "pref_name": "長崎県",
+   "muni_code": "42207",
+   "muni_name": "戸石川町",
+   "offset_km": 0.0
+  },
+  "47807": {
+   "block_no": "47807",
+   "name": "福岡",
+   "pref_code": "40",
+   "pref_name": "福岡県",
+   "muni_code": "40133",
+   "muni_name": "草香江一丁目",
+   "offset_km": 0.0
+  },
+  "47809": {
+   "block_no": "47809",
+   "name": "飯塚",
+   "pref_code": "40",
+   "pref_name": "福岡県",
+   "muni_code": "40205",
+   "muni_name": "立岩",
+   "offset_km": 0.0
+  },
+  "47812": {
+   "block_no": "47812",
+   "name": "佐世保",
+   "pref_code": "42",
+   "pref_name": "長崎県",
+   "muni_code": "42202",
+   "muni_name": "三浦町",
+   "offset_km": 1.0
+  },
+  "47813": {
+   "block_no": "47813",
+   "name": "佐賀",
+   "pref_code": "41",
+   "pref_name": "佐賀県",
+   "muni_code": "41201",
+   "muni_name": "大財北町",
+   "offset_km": 0.0
+  },
+  "47814": {
+   "block_no": "47814",
+   "name": "日田",
+   "pref_code": "44",
+   "pref_name": "大分県",
+   "muni_code": "44204",
+   "muni_name": "大字十二町",
+   "offset_km": 0.0
+  },
+  "47815": {
+   "block_no": "47815",
+   "name": "大分",
+   "pref_code": "44",
+   "pref_name": "大分県",
+   "muni_code": "44201",
+   "muni_name": "錦町一丁目",
+   "offset_km": 0.0
+  },
+  "47817": {
+   "block_no": "47817",
+   "name": "長崎",
+   "pref_code": "42",
+   "pref_name": "長崎県",
+   "muni_code": "42201",
+   "muni_name": "小曽根町",
+   "offset_km": 0.0
+  },
+  "47818": {
+   "block_no": "47818",
+   "name": "雲仙岳",
+   "pref_code": "42",
+   "pref_name": "長崎県",
+   "muni_code": "42213",
+   "muni_name": "小浜町雲仙",
+   "offset_km": 0.0
+  },
+  "47819": {
+   "block_no": "47819",
+   "name": "熊本",
+   "pref_code": "43",
+   "pref_name": "熊本県",
+   "muni_code": "43101",
+   "muni_name": "京町二丁目",
+   "offset_km": 0.0
+  },
+  "47822": {
+   "block_no": "47822",
+   "name": "延岡",
+   "pref_code": "45",
+   "pref_name": "宮崎県",
+   "muni_code": "45203",
+   "muni_name": "天神小路",
+   "offset_km": 0.0
+  },
+  "47823": {
+   "block_no": "47823",
+   "name": "阿久根",
+   "pref_code": "46",
+   "pref_name": "鹿児島県",
+   "muni_code": "46206",
+   "muni_name": "赤瀬川",
+   "offset_km": 0.0
+  },
+  "47824": {
+   "block_no": "47824",
+   "name": "人吉",
+   "pref_code": "43",
+   "pref_name": "熊本県",
+   "muni_code": "43203",
+   "muni_name": "中青井町",
+   "offset_km": 0.0
+  },
+  "47827": {
+   "block_no": "47827",
+   "name": "鹿児島",
+   "pref_code": "46",
+   "pref_name": "鹿児島県",
+   "muni_code": "46201",
+   "muni_name": "東郡元町",
+   "offset_km": 0.0
+  },
+  "47829": {
+   "block_no": "47829",
+   "name": "都城",
+   "pref_code": "45",
+   "pref_name": "宮崎県",
+   "muni_code": "45202",
+   "muni_name": "菖蒲原町",
+   "offset_km": 0.0
+  },
+  "47830": {
+   "block_no": "47830",
+   "name": "宮崎",
+   "pref_code": "45",
+   "pref_name": "宮崎県",
+   "muni_code": "45201",
+   "muni_name": "霧島五丁目",
+   "offset_km": 0.0
+  },
+  "47831": {
+   "block_no": "47831",
+   "name": "枕崎",
+   "pref_code": "46",
+   "pref_name": "鹿児島県",
+   "muni_code": "46204",
+   "muni_name": "高見町",
+   "offset_km": 0.0
+  },
+  "47835": {
+   "block_no": "47835",
+   "name": "油津",
+   "pref_code": "45",
+   "pref_name": "宮崎県",
+   "muni_code": "45204",
+   "muni_name": "梅ケ浜一丁目",
+   "offset_km": 1.0
+  },
+  "47836": {
+   "block_no": "47836",
+   "name": "屋久島",
+   "pref_code": "46",
+   "pref_name": "鹿児島県",
+   "muni_code": "46505",
+   "muni_name": "小瀬田",
+   "offset_km": 0.0
+  },
+  "47837": {
+   "block_no": "47837",
+   "name": "種子島",
+   "pref_code": "46",
+   "pref_name": "鹿児島県",
+   "muni_code": "46213",
+   "muni_name": "西之表",
+   "offset_km": 0.0
+  },
+  "47838": {
+   "block_no": "47838",
+   "name": "牛深",
+   "pref_code": "43",
+   "pref_name": "熊本県",
+   "muni_code": "43215",
+   "muni_name": "牛深町",
+   "offset_km": 0.0
+  },
+  "47843": {
+   "block_no": "47843",
+   "name": "福江",
+   "pref_code": "42",
+   "pref_name": "長崎県",
+   "muni_code": "42211",
+   "muni_name": "吉久木町",
+   "offset_km": 0.0
+  },
+  "47887": {
+   "block_no": "47887",
+   "name": "松山",
+   "pref_code": "38",
+   "pref_name": "愛媛県",
+   "muni_code": "38201",
+   "muni_name": "北持田町",
+   "offset_km": 0.0
+  },
+  "47890": {
+   "block_no": "47890",
+   "name": "多度津",
+   "pref_code": "37",
+   "pref_name": "香川県",
+   "muni_code": "37404",
+   "muni_name": "家中",
+   "offset_km": 0.0
+  },
+  "47891": {
+   "block_no": "47891",
+   "name": "高松",
+   "pref_code": "37",
+   "pref_name": "香川県",
+   "muni_code": "37201",
+   "muni_name": "伏石町",
+   "offset_km": 0.0
+  },
+  "47892": {
+   "block_no": "47892",
+   "name": "宇和島",
+   "pref_code": "38",
+   "pref_name": "愛媛県",
+   "muni_code": "38203",
+   "muni_name": "藤江",
+   "offset_km": 1.0
+  },
+  "47893": {
+   "block_no": "47893",
+   "name": "高知",
+   "pref_code": "39",
+   "pref_name": "高知県",
+   "muni_code": "39201",
+   "muni_name": "北本町三丁目",
+   "offset_km": 0.0
+  },
+  "47895": {
+   "block_no": "47895",
+   "name": "徳島",
+   "pref_code": "36",
+   "pref_name": "徳島県",
+   "muni_code": "36201",
+   "muni_name": "大和町二丁目",
+   "offset_km": 0.0
+  },
+  "47897": {
+   "block_no": "47897",
+   "name": "宿毛",
+   "pref_code": "39",
+   "pref_name": "高知県",
+   "muni_code": "39208",
+   "muni_name": "小筑紫町田ノ浦",
+   "offset_km": 0.0
+  },
+  "47898": {
+   "block_no": "47898",
+   "name": "清水",
+   "pref_code": "39",
+   "pref_name": "高知県",
+   "muni_code": "39209",
+   "muni_name": "足摺岬",
+   "offset_km": 1.0
+  },
+  "47899": {
+   "block_no": "47899",
+   "name": "室戸岬",
+   "pref_code": "39",
+   "pref_name": "高知県",
+   "muni_code": "39202",
+   "muni_name": "室戸岬町",
+   "offset_km": 0.0
+  },
+  "47909": {
+   "block_no": "47909",
+   "name": "名瀬",
+   "pref_code": "46",
+   "pref_name": "鹿児島県",
+   "muni_code": "46222",
+   "muni_name": "名瀬矢之脇町",
+   "offset_km": 0.0
+  },
+  "47912": {
+   "block_no": "47912",
+   "name": "与那国島",
+   "pref_code": "47",
+   "pref_name": "沖縄県",
+   "muni_code": "47382",
+   "muni_name": "字与那国",
+   "offset_km": 0.0
+  },
+  "47917": {
+   "block_no": "47917",
+   "name": "西表島",
+   "pref_code": "47",
+   "pref_name": "沖縄県",
+   "muni_code": "47381",
+   "muni_name": "字上原",
+   "offset_km": 0.0
+  },
+  "47918": {
+   "block_no": "47918",
+   "name": "石垣島",
+   "pref_code": "47",
+   "pref_name": "沖縄県",
+   "muni_code": "47207",
+   "muni_name": "字登野城",
+   "offset_km": 0.0
+  },
+  "47927": {
+   "block_no": "47927",
+   "name": "宮古島",
+   "pref_code": "47",
+   "pref_name": "沖縄県",
+   "muni_code": "47214",
+   "muni_name": "平良",
+   "offset_km": 0.0
+  },
+  "47929": {
+   "block_no": "47929",
+   "name": "久米島",
+   "pref_code": "47",
+   "pref_name": "沖縄県",
+   "muni_code": "47361",
+   "muni_name": "字比嘉",
+   "offset_km": 0.0
+  },
+  "47936": {
+   "block_no": "47936",
+   "name": "那覇",
+   "pref_code": "47",
+   "pref_name": "沖縄県",
+   "muni_code": "47201",
+   "muni_name": "樋川一丁目",
+   "offset_km": 0.0
+  },
+  "47940": {
+   "block_no": "47940",
+   "name": "名護",
+   "pref_code": "47",
+   "pref_name": "沖縄県",
+   "muni_code": "47209",
+   "muni_name": "字宮里",
+   "offset_km": 0.0
+  },
+  "47942": {
+   "block_no": "47942",
+   "name": "沖永良部",
+   "pref_code": "46",
+   "pref_name": "鹿児島県",
+   "muni_code": "46533",
+   "muni_name": "大字国頭",
+   "offset_km": 0.0
+  },
+  "47945": {
+   "block_no": "47945",
+   "name": "南大東（南大東島）",
+   "pref_code": "47",
+   "pref_name": "沖縄県",
+   "muni_code": "47357",
+   "muni_name": "字在所",
+   "offset_km": 0.0
+  },
+  "47971": {
+   "block_no": "47971",
+   "name": "父島",
+   "pref_code": "13",
+   "pref_name": "東京都",
+   "muni_code": "13421",
+   "muni_name": "父島",
+   "offset_km": 0.0
+  },
+  "47991": {
+   "block_no": "47991",
+   "name": "南鳥島",
+   "pref_code": "13",
+   "pref_name": "東京都",
+   "muni_code": "13421",
+   "muni_name": "南鳥島",
+   "offset_km": 0.0
+  }
+ }
+}

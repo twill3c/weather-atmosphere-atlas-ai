@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>気象庁｜過去の気象データ検索</title>
+<meta name="Author" content="気象庁 Japan Meteorological Agency" />
+<meta name="keywords" content="気象庁 Japan Meteorological Agency" />
+<meta name="description" content="気象庁｜過去の気象データ検索" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<link rel="stylesheet" type="text/css" href="/com/css/define.css" media="all" />
+<link rel="stylesheet" type="text/css" href="../../../css/default.css" media="all" />
+<link rel="stylesheet" type="text/css" href="../../../css/kako.css" media="all" />
+<style type="text/css" media="all"><!-- @import url(../../../../../com/default.css); --></style>
+</head>
+
+<body>
+<noscript><div>すべての機能をご利用いただくにはJavascriptを有効にしてください。</div></noscript>
+<!--header start -->
+<div id="header_area">
+  <div id="nheader">
+    <div id="logo"><a href="//www.jma.go.jp/jma/index.html"><img src="//www.jma.go.jp/jma/com/images/logo.gif" alt="気象庁" width="120" height="67" /></a></div>
+    <div id="header2_right">
+      <div id="header2_link">
+        <ul>
+          <li xml:lang="en" lang="en"><a href="//www.jma.go.jp/jma/kokusai/multi.html">Other Languages</a></li>
+        </ul>
+      </div>
+      <div id="header2_link">
+        <ul>
+          <li xml:lang="en" lang="en"><a href="//www.jma.go.jp/jma/indexe.html">ENGLISH</a></li>
+        </ul>
+      </div>
+<!-- search -->
+      <div id="gsearch">
+        <form id="cse-search-box" action="//google.com/cse">
+          <input type="hidden" name="cx" value="009950868052057056798:0yrbmp7chwi">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="text" name="q">
+          <input type="image" name="sa" src="//www.jma.go.jp/jma/com/images/btn_search6.png" alt="検索">
+        </form>
+        <script type="text/javascript" src="//www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+      </div>
+<!-- search end-->
+    </div>
+    <ul id="gnavi">
+      <li><a href="//www.jma.go.jp/">ホーム</a></li>
+      <li><a href="//www.jma.go.jp/jma/menu/menuflash.html">防災情報</a></li>
+      <li><a href="//www.jma.go.jp/jma/menu/menureport.html" class="on">各種データ・資料</a></li>
+      <li><a href="//www.jma.go.jp/jma/menu/areas.html">地域の情報</a></li>
+      <li><a href="//www.jma.go.jp/jma/menu/menuknowledge.html">知識・解説</a></li>
+      <li><a href="//www.jma.go.jp/jma/menu/menuappli.html">各種申請・ご案内</a></li>
+    </ul>
+  </div>
+</div>
+<!--header end -->
+
+<div id="contents_area2">
+  <div id="ncontents2">
+<!-- pankuzu menu -->
+ <ul class="breadcrumb2">
+  <li><a href="//www.jma.go.jp/">ホーム</a>&nbsp;&gt;&nbsp;</li>
+  <li><a href="//www.jma.go.jp/jma/menu/menureport.html">各種データ・資料</a>&nbsp;&gt;&nbsp;</li>
+  <li><a href="../../../etrn/index.php">過去の気象データ検索</a>&nbsp;&gt;&nbsp;</li>
+  <li><a href="first.html">利用される方へ</a>&nbsp;&gt;&nbsp;</li>
+  <li>値欄の記号の説明</li>
+  </ul>
+<!-- //pankuzu menu -->
+
+<div id="main">
+
+<!-- contents -->
+<h1>値欄の記号の説明</h1>
+<a name="kigou"></a>
+<p class="mtx"></p>
+<div class="mtx">
+
+<TABLE class="data2" summary="記号の説明">
+  <TBODY>
+    <TR>
+      <TH scope="col">記号</TH>
+      <TH scope="col">説明</TH>
+    </TR>
+    <TR>
+      <TD>--</TD>
+      <TD>該当現象、または該当現象による量等がない場合に表示します。</TD>
+    </TR>
+    <TR>
+      <TD>0</TD>
+      <TD>該当現象による量はあるが、1に足りない場合に表示します。</TD>
+    </TR>
+    <TR>
+      <TD>0.0</TD>
+      <TD>該当現象による量はあるが、0.1に足りない場合に表示します。ただし、降水量の場合は、0.5mmに足りない場合に0.0と表示します。</TD>
+    </TR>
+    <TR>
+      <TD>0<span style="vertical-align:super; font-size:80%">+</span></TD>
+      <TD>雲はあるが、雲量が1に満たない場合です。</TD>
+    </TR>
+    <TR>
+      <TD>10<span style="vertical-align:super; font-size:80%">-</span></TD>
+      <TD>雲量が10でも、雲がない部分がある場合です。</TD>
+    </TR>
+    <TR>
+      <TD>)</TD>
+      <TD>統計を行う対象資料が許容範囲で欠けていますが、上位の統計を用いる際は一部の例外を除いて正常値（資料が欠けていない）と同等に扱います（準正常値）。
+	必要な資料数は、要素または現象、統計方法により若干異なりますが、全体数の80％を基準とします。
+        </TD>
+    </TR>
+    <TR>
+      <TD>]</TD>
+      <TD>統計を行う対象資料が許容範囲を超えて欠けています（資料不足値）。
+	値そのものを信用することはできず、通常は上位の統計に用いませんが、極値、合計、度数等の統計ではその値以上（以下）であることが確実である、といった性質を利用して統計に利用できる場合があります。</TD>
+    </TR>
+    <TR>
+      <TD>×</TD>
+      <TD>欠測の場合、または欠測のために合計値や平均値等が求められない場合に表示します。</TD>
+    </TR>
+    <TR>
+      <TD>///</TD>
+      <TD>欠測または観測を行っていない場合、欠測または観測を行っていないために合計値や平均値等が求められない場合に表示します。</TD>
+    </TR>
+    <TR>
+      <TD>空白</TD>
+      <TD>観測を行っていない場合、観測を行っていないために合計値や平均値等が求められない場合に空白になります。<BR>
+      通信障害等も空白になります。また、1960年以前等、データを掲載していない場合も空白にしています。</TD>
+    </TR>
+    <TR>
+      <TD>#</TD>
+      <TD>値にかなり疑問があるため表示しておりません。</TD>
+    </TR>
+    <TR>
+      <TD>*</TD>
+      <TD>1つの極値に対して期間内に起日が2日以上ある場合、最も新しい起日に*を付加して表示します。</TD>
+    </TR>
+    <TR>
+      <TD>@</TD>
+      <TD>観測所の廃止や観測の終了により統計を終了した場合、または統計を切断したため統計年数が足りない場合に、統計の終了または切断前までの値で求めた平年値です（参考値）。気候の特徴の把握には利用できるものの、平年差や平年比の計算には利用しません。</TD>
+    </TR>
+
+  </TBODY>
+</TABLE>
+</div>
+</div>
+
+<!-- //contents -->
+<p class="totop"><a href="#nheader">このページのトップへ</a></p>
+</div>
+</div>
+
+<div id="footer_area">
+  <div id="nfooter">
+  <!--<p>,気象庁,</p>-->
+  <ul>
+  <li><a href="//www.jma.go.jp/jma/kishou/info/coment.html">気象庁ホームページについて</a></li>
+  </ul>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,220 @@
+/* japan-weather-atmosphere-atlas — 配色と土台
+   観測値・派生値・AI 由来を色と記号の両方で区別する(SPEC F-14 / N-05)。
+   色だけで異常度を伝えない。 */
+
+:root {
+  --bg: #f7f8fa;
+  --surface-1: #ffffff;
+  --surface-2: #eef1f5;
+  --border: #d5dae2;
+  --text: #16202b;
+  --text-muted: #5b6876;
+
+  --observed: #1f5f8b;
+  --derived: #7a5c9e;
+  --ai: #a8541f;
+
+  --seq-0: #f2f6fa;
+  --seq-1: #cfe0ee;
+  --seq-2: #9dc2dd;
+  --seq-3: #66a0c8;
+  --seq-4: #3b7cae;
+  --seq-5: #1f5f8b;
+
+  --warm-0: #fff3e0;
+  --warm-1: #ffd8a8;
+  --warm-2: #ffb066;
+  --warm-3: #f2842c;
+  --warm-4: #cf5f12;
+  --warm-5: #9c4208;
+
+  --cool: #3b7cae;
+  --hot: #cf5f12;
+
+  --radius: 8px;
+  --shadow: 0 1px 2px rgba(16, 32, 43, 0.06), 0 2px 8px rgba(16, 32, 43, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12171d;
+    --surface-1: #1a2029;
+    --surface-2: #232b36;
+    --border: #333d4a;
+    --text: #e6ebf1;
+    --text-muted: #9aa7b5;
+    --observed: #7fb6dd;
+    --derived: #b79ad6;
+    --ai: #e59a5f;
+    --seq-0: #1c242e;
+    --seq-1: #24384a;
+    --seq-2: #2f5573;
+    --seq-3: #3c7099;
+    --seq-4: #4f8dbb;
+    --seq-5: #7fb6dd;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+a { color: var(--observed); }
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 5.5rem;
+}
+
+.wrap--wide { max-width: 1400px; }
+
+h1 { font-size: 1.6rem; line-height: 1.4; margin: 0 0 0.4rem; }
+h2 { font-size: 1.15rem; margin: 2rem 0 0.6rem; }
+h3 { font-size: 1rem; margin: 1.4rem 0 0.4rem; }
+
+.lede { color: var(--text-muted); margin: 0 0 1.5rem; }
+.muted { color: var(--text-muted); }
+.small { font-size: 0.85rem; }
+
+.card {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+  box-shadow: var(--shadow);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* 出所のバッジ。色だけに頼らず、必ず語も出す(SPEC F-14) */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+.badge--observed { color: var(--observed); }
+.badge--derived { color: var(--derived); }
+.badge--ai { color: var(--ai); }
+
+/* 主要ナビ */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 1rem;
+  align-items: center;
+  padding: 0.65rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-1);
+  font-size: 0.9rem;
+}
+.nav__brand { font-weight: 700; margin-right: 0.5rem; }
+.nav a { color: var(--text-muted); text-decoration: none; }
+.nav a:hover, .nav a:focus-visible { color: var(--text); text-decoration: underline; }
+
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+th, td { border-bottom: 1px solid var(--border); padding: 0.4rem 0.6rem; text-align: left; }
+th { color: var(--text-muted); font-weight: 600; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* 幅の狭い画面で表がつぶれないよう、横に逃がす(HC-078) */
+.scroll-x { overflow-x: auto; }
+
+button, select, input {
+  font: inherit;
+  color: inherit;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+}
+button { cursor: pointer; }
+button:hover { background: var(--surface-2); }
+button[aria-pressed="true"] { background: var(--observed); color: #fff; border-color: var(--observed); }
+
+:focus-visible { outline: 2px solid var(--observed); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* fleet: fixed footer(koho-lens が正本。5 項目・下部固定) */
+.site-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  border-top: 1px solid var(--border);
+  background: var(--surface-1);
+  padding: 0.7rem 1.25rem;
+}
+.site-footer__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1.1rem;
+  align-items: center;
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+.site-footer__inner a { color: var(--text-muted); text-decoration: none; }
+.site-footer__inner a:hover { text-decoration: underline; }
+.site-footer__copy { color: var(--text-muted); }
+
+/* fleet: フッタ区切り。規約の並び「MIT License © 2026 坂田哲朗 ・ GitHub ・ … 」の「・」。
+   CSS の ::before では innerText に出ず検品器から見えないので、文字として置いてある。 */
+.fsep {
+  color: currentColor;
+  opacity: 0.45;
+  margin: 0 -0.3rem;
+  user-select: none;
+}
+
+@media (max-width: 34rem) {
+  .wrap { padding-bottom: 7.5rem; }
+}
+
+/* 凡例。地図とパターンの両方で使うので、ここに置く。
+   色だけに頼らず、必ず語か数を添える(SPEC N-05)。 */
+.legend { display: flex; flex-direction: column; gap: 0.1rem; }
+.legend__item { display: flex; align-items: center; gap: 0.45rem; font-size: 0.78rem; }
+.legend__swatch {
+  width: 1.6rem;
+  height: 0.75rem;
+  border-radius: 2px;
+  border: 1px solid var(--border);
+  flex: none;
+}
+.legend__label { font-variant-numeric: tabular-nums; color: var(--text-muted); }
+
+/* 図の下に横並びで置く凡例(パターン画面)。色だけに頼らず語を添える。 */
+.legend--row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.2rem 1rem;
+  margin: 0.6rem 0;
+  font-size: 0.8rem;
+}
+.legend--row .legend__item { gap: 0.35rem; }

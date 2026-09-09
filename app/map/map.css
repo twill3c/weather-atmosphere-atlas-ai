@@ -1,0 +1,131 @@
+/* 地図画面。左に操作、右に地図。狭い幅では縦に積む(HC-078) */
+
+.map-shell {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 0;
+  min-height: calc(100vh - 3.2rem);
+  padding-bottom: 4.2rem;
+}
+
+.map-side {
+  border-right: 1px solid var(--border);
+  background: var(--surface-1);
+  padding: 1rem 1rem 1.5rem;
+  overflow-y: auto;
+}
+
+.map-title { font-size: 1.15rem; margin: 0 0 0.2rem; }
+.map-intro { margin: 0 0 1rem; }
+
+.map-group { margin-bottom: 1.25rem; }
+.map-group__title {
+  font-size: 0.78rem;
+  text-transform: none;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin: 0 0 0.4rem;
+}
+.map-group__items { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+
+.map-layer-btn {
+  font-size: 0.82rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+}
+
+/* .legend の基本形は globals.css にある(地図とパターンの両方で使う) */
+.legend__unit { margin: 0.35rem 0 0.6rem; }
+.legend__missing {
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  border: 1px solid #9aa7b5;
+  margin-right: 0.35rem;
+  vertical-align: -1px;
+}
+
+.map-main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 0.75rem 1rem 1rem;
+  gap: 0.6rem;
+}
+
+.map-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.8rem;
+}
+
+.map-notice {
+  margin: 0;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--ai);
+  border-radius: 6px;
+  background: var(--surface-2);
+  font-size: 0.88rem;
+}
+
+.map-canvas {
+  width: 100%;
+  height: min(60vh, 560px);
+  min-height: 320px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface-2);
+}
+.map-canvas--loading,
+.map-canvas--message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  text-align: left;
+}
+.map-canvas--message > div { max-width: 46ch; }
+
+.map-timeline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+.map-timeline__range { flex: 1 1 220px; min-width: 160px; }
+
+.map-detail__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.8rem;
+  margin-bottom: 0.4rem;
+}
+.map-detail__head button { margin-left: auto; font-size: 0.8rem; }
+
+.map-credit { margin: 0; }
+
+/* MapLibre の出典表示を読みやすく */
+.maplibregl-ctrl-attrib {
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.86);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .maplibregl-ctrl-attrib {
+    background: rgba(26, 32, 41, 0.86);
+  }
+  :root:not([data-theme="light"]) .maplibregl-ctrl-attrib a { color: #9aa7b5; }
+}
+
+@media (max-width: 52rem) {
+  .map-shell { grid-template-columns: 1fr; }
+  .map-side {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .map-canvas { height: min(52vh, 420px); }
+}

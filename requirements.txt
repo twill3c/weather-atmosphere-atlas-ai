@@ -1,0 +1,13 @@
+# SPEC §14。Python >= 3.12。
+# 取り込みは標準ライブラリだけで動く(requests も beautifulsoup4 も使わない)。
+# ここに挙げるのは特徴量から先の工程で要るもの。
+
+numpy
+pandas
+pyarrow
+scipy
+scikit-learn
+torch
+umap-learn
+joblib
+pytest
