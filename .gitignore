@@ -2,9 +2,15 @@
 data/raw/
 data/staging/
 data/cache/
-data/processed/*.parquet
-data/models/*.pt
-data/models/*.joblib
+# 取り込みと学習の途中出力。再生成できる(scripts/rebuild_all.sh)。
+# 配信物は public/data にある。
+# 以前は `data/processed/*.parquet` だけを書いていたが、実際の出力は JSONL / JSON / npz で、
+# 785 ファイル・637 MB を追跡していた(実測 2026-09-14 / T-039)。拡張子でなく場所で外す。
+/data/processed/
+/data/models/
+
+# ビルドのたびに作る刻印(scripts/build_stamp.mjs)
+/public/build-stamp.json
 
 # NIES の生ファイルは再配布しない(SPEC §2.5)
 *.zip

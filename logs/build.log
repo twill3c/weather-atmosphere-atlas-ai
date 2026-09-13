@@ -1,11 +1,16 @@
 
+> japan-weather-atmosphere-atlas@0.1.0 prebuild
+> node scripts/build_stamp.mjs
+
+build-stamp 78316a121f8caa31(638 ファイル: {"app":14,"components":1,"lib":3,"next.config.mjs":1,"package.json":1,"data":617,"tsconfig.json":1})
+
 > japan-weather-atmosphere-atlas@0.1.0 build
 > next build
 
    ▲ Next.js 15.5.25
 
    Creating an optimized production build ...
- ✓ Compiled successfully in 4.4s
+ ✓ Compiled successfully in 3.4s
    Linting and checking validity of types ...
    Collecting page data ...
    Generating static pages (0/10) ...

@@ -1,0 +1,34 @@
+# Vercel に送らないもの(SPEC N-04 / T-036)。
+#
+# **パターンは先頭 / で固定する。** 無印のパターンは深い階層にも当たる ——
+# folksound-atlas は `data` と書いて `public/data` を消し、画面が空になった。
+# ここで `/data/` と書くのは、ルート直下の data/ だけを指すためである。
+#
+# 実測 2026-09-14 の大きさ:
+#   data/cache 1.8 GB(38,718 ファイル)/ data/processed 637 MB / .venv 1.3 GB /
+#   node_modules 461 MB / out 105 MB / .next 77 MB
+# Free プランは 24 時間あたり 5,000 ファイルが上限なので、これらを送ると一度で詰まる。
+#
+# 残すもの: app/ components/ lib/ public/ scripts/(prebuild が build_stamp.mjs を使う)
+#           package.json next.config.mjs tsconfig.json
+
+# 取り込み・学習の途中出力と生の取得物(国立環境研究所の生ファイルは再配布しない)
+/data/
+
+# 依存とビルド出力(Vercel 側で作り直す)
+/.venv/
+/node_modules/
+/.next/
+/out/
+
+# 画面に要らないもの
+/jwaa/
+/tests/
+/harness/
+/logs/
+/shots/
+/.pytest_cache/
+/.scaffold/
+/.wt/
+
+*.pyc

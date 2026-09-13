@@ -7,6 +7,7 @@
   "description": "日本の過去の気象・温室効果ガス・大気汚染を地図と時系列で重ね、深層学習の表現で似た日・異常度・パターンを引く静的アトラス",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/build_stamp.mjs",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
@@ -14,6 +15,7 @@
     "test:watch": "vitest",
     "smoke": "node harness/smoke.mjs",
     "smoke:shot": "node harness/smoke.mjs --shot",
+    "smoke:prod": "node harness/smoke_prod.mjs",
     "verify": "npm run typecheck && npm run test && npm run build && npm run smoke"
   },
   "dependencies": {
