@@ -84,7 +84,7 @@ export default function Page() {
       <p className="small muted">
         取得・正規化は Python、表現の学習は PyTorch、画面は Next.js と MapLibre GL JS。
         サーバ側の処理は持たず、静的ファイルだけを配っています。
-        設計と実測の記録は<a href="https://github.com/twill3c/japan-weather-atmosphere-atlas">リポジトリ</a>にあります。
+        設計と実測の記録は<a href="https://github.com/twill3c/weather-atmosphere-atlas-ai">リポジトリ</a>にあります。
       </p>
     </main>
   );

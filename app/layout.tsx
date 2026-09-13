@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 /** フリート共通フッタの行き先(koho-lens が正本)。 */
 const FOOTER = {
   license:
-    "https://github.com/twill3c/japan-weather-atmosphere-atlas/blob/main/LICENSE",
-  repository: "https://github.com/twill3c/japan-weather-atmosphere-atlas",
-  guide: "https://github.com/twill3c/japan-weather-atmosphere-atlas#readme",
+    "https://github.com/twill3c/weather-atmosphere-atlas-ai/blob/main/LICENSE",
+  repository: "https://github.com/twill3c/weather-atmosphere-atlas-ai",
+  guide: "https://github.com/twill3c/weather-atmosphere-atlas-ai#readme",
   blueprint:
-    "https://github.com/twill3c/japan-weather-atmosphere-atlas/blob/main/SPEC.md",
+    "https://github.com/twill3c/weather-atmosphere-atlas-ai/blob/main/SPEC.md",
   appMenu: "https://app-menu-amber.vercel.app/",
 };
 
