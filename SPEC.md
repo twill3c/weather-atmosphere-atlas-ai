@@ -412,3 +412,31 @@ k を 6 から 16 まで変えてシルエット係数を測った。最大は k
 | L5 | Web 資産生成と地図 UI |
 | L6 | 比較・パターン・出典・実ブラウザ検品 |
 | L7 | 最適化・デプロイ・文書 |
+
+## 13. 公開(loop_001・実測 2026-09-14)
+
+| 項目 | 値 |
+|---|---|
+| 本番 | <https://weather-atmosphere-atlas-ai.vercel.app>(Vercel CLI デプロイ・Git 連携なし) |
+| リポジトリ | <https://github.com/twill3c/weather-atmosphere-atlas-ai>(PUBLIC・main) |
+| app-menu | 登録簿の planned カード `weather-atmosphere-atlas-ai` をその場で published に上げた |
+| 送る木 | 672 ファイル・106.4 MB(`.vercelignore` 適用後。Free の 24 時間 5,000 ファイル上限の内側) |
+| ビルド刻印 | `00fb871fe8f92a1c`(638 ファイル: app 14 / components 1 / lib 3 / data 617 / ルート設定 3) |
+| 本番検品 | `harness/smoke_prod.mjs` 42 件。**最初に本番の刻印を手元と突き合わせ、一致を確かめてから**残りを見る |
+
+**公開名とローカルのディレクトリ名は違う。** 構想書 §13 はディレクトリを
+`japan-weather-atmosphere-atlas` と例示していたが、フリートの登録簿(app-menu)には
+同じ題名の planned カードが id `weather-atmosphere-atlas-ai` で先に在った。
+先例(jinja-origin-atlas-ai / fishing-port-atlas-ai)は planned をその場で上げて
+リポジトリ名を id に合わせているので、公開名はそちらに揃えた。
+ローカルのディレクトリは据え置いている(改名は .venv の絶対経路を壊しうる)。
+そのため app-menu の `measure_repos.py` はこのプロジェクトを「見つからないディレクトリ」と
+報告する —— 揃えるかどうかは利用者の判断に残す。
+
+**反映の判定は刻印で行う。** デプロイの終了コードや `vercel ls` は、上限で失敗したときにも
+前の版を「健やか」に見せる。配る木の中身(画面のソースとデータ)から作った刻印を
+本番から引き、手元と違えば他を見ずに止める(HC-148)。
+
+**`vercel link` は `.env.local`(OIDC トークン)を作る。** 初回デプロイの時点では
+`.vercelignore` が `.env*` を除外していなかった。静的書き出しは `out/` しか配らないので
+本番では 404 を確認したが、送る理由も無いので以後は除外する(T-036)。

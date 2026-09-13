@@ -38,6 +38,9 @@ MUST_EXCLUDE = [
     ".next/cache/x.json",
     "out/index.html",
     "shots/_map_.png",
+    # `vercel link` が作る。OIDC トークンを持つ(2026-09-14)
+    ".env.local",
+    ".vercel/project.json",
 ]
 #: 配らなければ画面が壊れるもの
 MUST_INCLUDE = [

@@ -1,0 +1,94 @@
+<claude-code-hint v="1" type="plugin" value="vercel@claude-plugins-official" />
+Vercel CLI 55.0.0 (Node.js 24.3.0)
+Retrieving project…
+Deploying twill3c-8670s-projects/weather-atmosphere-atlas-ai
+Uploading [--------------------] (0.0B/101.4MB)
+Uploading [=====---------------] (25.4MB/101.4MB)
+Uploading [==========----------] (50.7MB/101.4MB)
+Uploading [===============-----] (76.1MB/101.4MB)
+Uploading [====================] (101.4MB/101.4MB)
+  Inspect         https://vercel.com/twill3c-8670s-projects/weather-atmosphere-atlas-ai/8MEpVCmM9jwVMB68Ly5hofG3ZHBU
+  Production      https://weather-atmosphere-atlas-pv8vfuo11-twill3c-8670s-projects.vercel.app
+Building…
+Building…
+Running build in Washington, D.C., USA (East) – iad1
+Build machine configuration: 2 cores, 8 GB
+Retrieving list of deployment files...
+Previous build caches not available.
+Downloading 682 deployment files...
+Running "vercel build"
+Vercel CLI 59.11.7
+Installing dependencies...
+added 101 packages in 9s
+21 packages are looking for funding
+run `npm fund` for details
+npm warn allow-scripts 1 package has install scripts not yet covered by allowScripts:
+npm warn allow-scripts   esbuild@0.21.5 (postinstall: node install.js)
+npm warn allow-scripts
+npm warn allow-scripts Run `npm approve-scripts --allow-scripts-pending` to review, or `npm approve-scripts <pkg>` to allow.
+Detected Next.js version: 15.5.25
+Running "npm run build"
+> japan-weather-atmosphere-atlas@0.1.0 prebuild
+> node scripts/build_stamp.mjs
+build-stamp 00fb871fe8f92a1c(638 ファイル: {"app":14,"components":1,"lib":3,"next.config.mjs":1,"package.json":1,"data":617,"tsconfig.json":1})
+> japan-weather-atmosphere-atlas@0.1.0 build
+> next build
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+▲ Next.js 15.5.25
+Creating an optimized production build ...
+✓ Compiled successfully in 8.7s
+Linting and checking validity of types ...
+Collecting page data ...
+Generating static pages (0/10) ...
+Generating static pages (2/10)
+Generating static pages (4/10)
+Generating static pages (7/10)
+✓ Generating static pages (10/10)
+Finalizing page optimization ...
+Collecting build traces ...
+Exporting (0/2) ...
+✓ Exporting (2/2)
+Route (app)                                 Size  First Load JS
+┌ ○ /                                      130 B         103 kB
+├ ○ /_not-found                            994 B         104 kB
+├ ○ /about                                 130 B         103 kB
+├ ○ /compare                             4.04 kB         107 kB
+├ ○ /data-policy                           130 B         103 kB
+├ ○ /ghg                                 2.51 kB         105 kB
+├ ○ /map                                 6.04 kB         109 kB
+└ ○ /patterns                            4.11 kB         107 kB
++ First Load JS shared by all             103 kB
+├ chunks/255-a85cef9cc3a04b12.js       46.5 kB
+├ chunks/4bd1b696-c023c6e3521b1417.js  54.2 kB
+└ other shared chunks (total)          2.03 kB
+○  (Static)  prerendered as static content
+Notice: detected `next export`, this de-opts some Next.js features
+See more info: https://nextjs.org/docs/advanced-features/static-html-export
+[2K[1A[2K[G  Production      https://weather-atmosphere-atlas-pv8vfuo11-twill3c-8670s-projects.vercel.app
+Completing…
+▲ Aliased         https://weather-atmosphere-atlas-ai.vercel.app
+{
+  "status": "ok",
+  "deployment": {
+    "id": "dpl_8MEpVCmM9jwVMB68Ly5hofG3ZHBU",
+    "url": "https://weather-atmosphere-atlas-pv8vfuo11-twill3c-8670s-projects.vercel.app",
+    "inspectorUrl": "https://vercel.com/twill3c-8670s-projects/weather-atmosphere-atlas-ai/8MEpVCmM9jwVMB68Ly5hofG3ZHBU",
+    "readyState": "READY",
+    "target": "production",
+    "deploymentApiUrl": "https://api.vercel.com/v13/deployments/dpl_8MEpVCmM9jwVMB68Ly5hofG3ZHBU"
+  },
+  "message": "Deployment weather-atmosphere-atlas-pv8vfuo11-twill3c-8670s-projects.vercel.app ready.",
+  "next": [
+    {
+      "command": "vercel inspect weather-atmosphere-atlas-pv8vfuo11-twill3c-8670s-projects.vercel.app --scope twill3c-8670s-projects",
+      "when": "Inspect deployment"
+    },
+    {
+      "command": "vercel deploy --prod --scope twill3c-8670s-projects",
+      "when": "Promote to production"
+    }
+  ]
+}
