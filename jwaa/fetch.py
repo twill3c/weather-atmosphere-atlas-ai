@@ -23,7 +23,8 @@ from dataclasses import dataclass
 from typing import Callable, Final
 
 USER_AGENT: Final = (
-    "japan-weather-atmosphere-atlas/0.1 (research; +https://github.com/) "
+    "weather-atmosphere-atlas-ai/0.1 "
+    "(research; +https://github.com/twill3c/weather-atmosphere-atlas-ai) "
     "Python-urllib"
 )
 

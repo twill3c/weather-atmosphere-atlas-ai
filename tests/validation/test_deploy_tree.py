@@ -274,9 +274,10 @@ def test_t039c_footer_points_to_the_real_app_menu_and_repository():
     assert "app-menu-amber.vercel.app" in layout
     assert "https://app-menu.vercel.app" not in layout
     # 公開名は app-menu の登録簿の id に合わせる(先例: jinja-origin-atlas-ai / fishing-port-atlas-ai)。
-    # ローカルのディレクトリ名 japan-weather-atmosphere-atlas とは違う。
+    # 旧名(loop_003 でディレクトリも改名)を宛先に残さない。
     assert "github.com/twill3c/weather-atmosphere-atlas-ai" in layout
-    assert "github.com/twill3c/japan-weather-atmosphere-atlas" not in layout
+    old_name = "japan-" + "weather-atmosphere-atlas"  # 旧名(T-042 に自分で掛からないよう分けて書く)
+    assert f"github.com/twill3c/{old_name}" not in layout
 
 
 ARTIFACT_URL = re.compile(

@@ -1,4 +1,4 @@
-"""japan-weather-atmosphere-atlas — 公開気象・大気環境データの取り込みと正規化。
+"""weather-atmosphere-atlas-ai — 公開気象・大気環境データの取り込みと正規化。
 
 出典:
   気象庁(公共データ利用規約 第1.0版)

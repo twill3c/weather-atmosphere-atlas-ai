@@ -1,4 +1,4 @@
-# SPEC.md — japan-weather-atmosphere-atlas
+# SPEC.md — weather-atmosphere-atlas-ai
 
 日本気象・大気環境アトラス AI(Japan Weather & Atmosphere Atlas AI)V1.0
 
@@ -424,14 +424,16 @@ k を 6 から 16 まで変えてシルエット係数を測った。最大は k
 | ビルド刻印 | `00fb871fe8f92a1c`(638 ファイル: app 14 / components 1 / lib 3 / data 617 / ルート設定 3) |
 | 本番検品 | `harness/smoke_prod.mjs` 42 件。**最初に本番の刻印を手元と突き合わせ、一致を確かめてから**残りを見る |
 
-**公開名とローカルのディレクトリ名は違う。** 構想書 §13 はディレクトリを
-`japan-weather-atmosphere-atlas` と例示していたが、フリートの登録簿(app-menu)には
+**公開名は登録簿の id に合わせた。** 構想書 §13 はディレクトリを
+旧名 `japan-weather-atmosphere-atlas` で例示していたが、フリートの登録簿(app-menu)には
 同じ題名の planned カードが id `weather-atmosphere-atlas-ai` で先に在った。
 先例(jinja-origin-atlas-ai / fishing-port-atlas-ai)は planned をその場で上げて
 リポジトリ名を id に合わせているので、公開名はそちらに揃えた。
-ローカルのディレクトリは据え置いている(改名は .venv の絶対経路を壊しうる)。
-そのため app-menu の `measure_repos.py` はこのプロジェクトを「見つからないディレクトリ」と
-報告する —— 揃えるかどうかは利用者の判断に残す。
+loop_001・002 のあいだはローカルのディレクトリだけ旧名のまま据え置いていたので、
+app-menu の `measure_repos.py` はこのプロジェクトを「見つからないディレクトリ」と報告していた。
+**loop_003 で利用者の判断によりすべてを `weather-atmosphere-atlas-ai` に揃える**
+(package.json の name・User-Agent・見出し。旧名が残らないことを T-042 で検査する。
+過去のループログと `logs/*.log` は記録なので書き換えない)。
 
 **反映の判定は刻印で行う。** デプロイの終了コードや `vercel ls` は、上限で失敗したときにも
 前の版を「健やか」に見せる。配る木の中身(画面のソースとデータ)から作った刻印を

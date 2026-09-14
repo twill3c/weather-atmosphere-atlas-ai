@@ -1,4 +1,4 @@
-# TEST_SPEC.md — japan-weather-atmosphere-atlas
+# TEST_SPEC.md — weather-atmosphere-atlas-ai
 
 ## 実行規約
 
@@ -87,6 +87,7 @@ NIES は合成フィクスチャを使う。**合成物が主張したい性質�
 | T-039 | N-04 | `.gitignore` が作業途中の出力に当たり、data/processed が追跡されていない。フッタの宛先が本物 | 実測で 785 ファイルが追跡されていた |
 | T-040 | HC-271 | フッタ 5 項目の行き先を項目ごとに照合する。歩き方・設計図は `claude.ai/code/artifact/<小文字 UUID>` で互いに異なる | 陽性対照つき(README / SPEC の暫定リンク・崩れた ID を拒む)。本番は `smoke_prod.mjs` が DOM の href で同じ形を見る |
 | T-041 | N-05 | `npm run verify` のチェーンを展開し、対象の無いテスト段が無く、pytest と実ブラウザ検品を含み、ビルドが検品より前 | loop_000 から `vitest run`(テストファイル 0 本)で exit 1 のまま止まっていた。陽性対照つき |
+| T-042 | N-04 | 追跡ファイル(`logs/` を除く)に旧名が残っていない。旧名を含む行は、その行で「旧」と明示したものだけ許す | loop_003 で公開名に揃えたときの残り 3 件を拾った。陽性対照つき |
 
 ## 未実装のゲート(SPEC §9 と対応)
 

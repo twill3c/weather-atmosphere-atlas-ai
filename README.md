@@ -4,7 +4,6 @@
 
 - 本番: <https://weather-atmosphere-atlas-ai.vercel.app>
 - リポジトリ: <https://github.com/twill3c/weather-atmosphere-atlas-ai>
-  (手元のディレクトリ名は `japan-weather-atmosphere-atlas`。公開名は app-menu の登録簿の id に合わせた)
 
 日本の過去の気象・温室効果ガス・大気汚染を地図と時系列で重ね、そこに深層学習で
 作った表現を添えて「似た日」「異常度」「パターン」を引けるようにする静的 Web アプリ。
@@ -42,8 +41,8 @@
 ## 使い方
 
 ```bash
-git clone <repository>
-cd japan-weather-atmosphere-atlas
+git clone https://github.com/twill3c/weather-atmosphere-atlas-ai.git
+cd weather-atmosphere-atlas-ai
 
 # Python(取り込みと学習)
 python -m venv .venv
