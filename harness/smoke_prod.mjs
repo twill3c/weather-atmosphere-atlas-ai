@@ -94,6 +94,13 @@ check(footer.length === 5, "フッタが 5 項目", footer.map((f) => f.text).jo
 const appMenu = footer.find((f) => f.text === "App Menu");
 check(appMenu?.href.includes("app-menu-amber.vercel.app"), "App Menu の宛先が app-menu-amber",
   appMenu?.href ?? "なし");
+// 3・4 番目は解説アーティファクト(T-040 と同じ形)。README や SPEC の暫定リンクは開けるので
+// 「引ける」だけでは仮の値を見逃す(HC-271)。
+const ARTIFACT = /^https:\/\/claude\.ai\/code\/artifact\/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
+for (const label of ["アトラスの歩き方", "アトラスの設計図"]) {
+  const item = footer.find((f) => f.text === label);
+  check(ARTIFACT.test(item?.href ?? ""), `フッタ「${label}」が解説アーティファクトを指す`, item?.href ?? "なし");
+}
 const body = await page.locator("body").innerText();
 check(!body.includes("app-menu.vercel.app"), "本文に他者の app-menu.vercel.app が無い");
 for (const f of footer) {

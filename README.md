@@ -83,7 +83,7 @@ python scripts/export/build_web_assets.py
 
 ```bash
 npm run dev        # 開発
-npm run verify     # 型検査 + テスト + ビルド + 実ブラウザ検品
+npm run verify     # 型検査 + pytest + ビルド + 実ブラウザ検品(.venv を有効にしてから)
 npm run build      # out/ に静的書き出し
 ```
 

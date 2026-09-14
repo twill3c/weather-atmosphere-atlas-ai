@@ -14,9 +14,9 @@ const FOOTER = {
   license:
     "https://github.com/twill3c/weather-atmosphere-atlas-ai/blob/main/LICENSE",
   repository: "https://github.com/twill3c/weather-atmosphere-atlas-ai",
-  guide: "https://github.com/twill3c/weather-atmosphere-atlas-ai#readme",
-  blueprint:
-    "https://github.com/twill3c/weather-atmosphere-atlas-ai/blob/main/SPEC.md",
+  // 解説アーティファクト 2 本(loop_002 で発行。既定は非公開なので共有設定が要る)
+  guide: "https://claude.ai/code/artifact/24b377ac-3a54-44e8-b0f9-e9276b12a463",
+  blueprint: "https://claude.ai/code/artifact/944f0c2d-106f-4b34-8692-293b90a56d2c",
   appMenu: "https://app-menu-amber.vercel.app/",
 };
 

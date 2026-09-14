@@ -277,3 +277,49 @@ def test_t039c_footer_points_to_the_real_app_menu_and_repository():
     # ローカルのディレクトリ名 japan-weather-atmosphere-atlas とは違う。
     assert "github.com/twill3c/weather-atmosphere-atlas-ai" in layout
     assert "github.com/twill3c/japan-weather-atmosphere-atlas" not in layout
+
+
+ARTIFACT_URL = re.compile(
+    r"^https://claude\.ai/code/artifact/"
+    r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+)
+
+
+def _footer_urls() -> dict[str, str]:
+    layout = (ROOT / "app" / "layout.tsx").read_text(encoding="utf-8")
+    start = layout.index("const FOOTER = {")
+    block = layout[start : layout.index("};", start)]
+    return dict(re.findall(r'(\w+):\s*"([^"]+)"', block))
+
+
+def test_footer_destinations_per_item():
+    """T-040: フッタは項目ごとに行き先を見る(HC-271)。
+
+    loop_001 までの 3・4 番目は README と SPEC への暫定リンクだった。GitHub の README は
+    開けるので、リンク切れの検査も目視も通る —— 仮の値が緑のまま残る形だった。
+    「どれかが github.com を向く」では足りないので、5 項目それぞれを正本の形と照合する。
+    """
+    urls = _footer_urls()
+    assert set(urls) == {"license", "repository", "guide", "blueprint", "appMenu"}, urls
+    assert urls["license"] == "https://github.com/twill3c/weather-atmosphere-atlas-ai/blob/main/LICENSE"
+    assert urls["repository"] == "https://github.com/twill3c/weather-atmosphere-atlas-ai"
+    assert urls["appMenu"] == "https://app-menu-amber.vercel.app/"
+    assert ARTIFACT_URL.match(urls["guide"]), f"歩き方がアーティファクトでない: {urls['guide']}"
+    assert ARTIFACT_URL.match(urls["blueprint"]), f"設計図がアーティファクトでない: {urls['blueprint']}"
+    assert urls["guide"] != urls["blueprint"], "歩き方と設計図が同じ行き先"
+
+
+def test_footer_artifact_pattern_rejects_placeholders():
+    """T-040 の陽性対照: 暫定の行き先と、形の崩れた ID を形の検査が拒むこと。"""
+    base = "https://claude.ai/code/artifact/"
+    for bad in (
+        "https://github.com/twill3c/weather-atmosphere-atlas-ai#readme",
+        "https://github.com/twill3c/weather-atmosphere-atlas-ai/blob/main/SPEC.md",
+        "https://github.com/",
+        base,
+        base + "e0bf220e-dd2b-48a8-9740-61cc7ebe5a8",  # 1 文字足りない
+        base + "E0BF220E-DD2B-48A8-9740-61CC7EBE5A8A",  # 大文字
+        base + "e0bf220e-dd2b-48a8-9740-61cc7ebe5a8a/",  # 末尾の /
+    ):
+        assert not ARTIFACT_URL.match(bad), bad
+    assert ARTIFACT_URL.match(base + "e0bf220e-dd2b-48a8-9740-61cc7ebe5a8a")
